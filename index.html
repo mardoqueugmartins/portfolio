@@ -1,0 +1,446 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
+    <title>Portfólio</title>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <h1>Mardoqueu <span>Martins</span></h1>
+        <nav>
+          <ul class="navigation-primary">
+            <li><a href="#home">Início</a></li>
+            <li><a href="#portfólio">Portfólio</a></li>
+            <li><a href="#services">Serviços</a></li>
+            <li><a href="#contact">Contato</a></li>
+            <li><a href="#about">Sobre</a></li>
+          </ul>
+          <a class="button-contact" href="#contact">Falar com Mardoqueu</a>
+          <i class="fa-solid fa-bars"></i>
+        </nav>
+      </div>
+    </header>
+<!-- Hero Section -->
+    <section class="hero-section">
+      <div class="container hero-grid">
+        <!-- Coluna 1: Texto -->
+        <div class="hero-text">
+          <h2 id="texthero">Hello, Mundo!</h2>
+          <h1 id="typinghero">
+            Desenvolvedor Web focado em performance, estrutura e resultado.
+          </h1>
+          <p id="phero">
+            Mais de 5 anos criando sites, landing pages e soluções digitais
+            orientadas à experiência do usuário e conversão. Atualmente cursando
+            Engenharia de Software.
+          </p>
+
+          <div class="button-hero">
+            <a id="download" href="#">Download CV</a>
+            <a id="projects" href="#">Ver Projetos</a>
+          </div>
+        </div>
+
+        <!-- Coluna 2: Imagem -->
+        <div class="hero-image">
+          <img src="img/Foto Mardoqueu.webp" alt="Imagem de Mardoqueu" />
+        </div>
+      </div>
+    </section>
+<!------------------------------------------->
+
+    <!-- Section Portfólio -->
+     <section aria-label="Section Portfólio" class="section-projects">
+     <div class="content-projects">
+      <h2 class="title">Alguns projetos</h2>
+      <div class="project-filters">
+        <button class="filter-btn active" data-filter="all">Todos</button>
+        <button class="filter-btn" data-filter="landing">Landing Pages</button>
+        <button class="filter-btn" data-filter="institucional">Institucionais</button>
+        <button class="filter-btn" data-filter="ecommerce">E-commerce</button>
+        <button class="filter-btn" data-filter="estudo">Projetos para Estudo</button>
+      </div>
+      <div class="project-grid">
+        <div class="project-card" data-category="landing">
+          <div class="project-img">
+            <img src="img/ezzos.webp" alt="Capa do projeto">
+            <div class="project-overlay">
+              <a href="portfolio/ezzos.html" target="_blank" rel="noopener noreferrer" class="btn-project">Ver projeto</a>
+            </div>
+          </div>
+          <div class="project-info">
+            <h3>Landing Page - Ezzos</h3>
+            <p>Landing page desenvolvida para apresentação estratégica da marca Ezzos, com foco em clareza de proposta de valor, posicionamento e conversão.
+            </p>
+            <div class="tags">
+              <span>Wordpress</span>
+              <span>Elementor</span>
+              <span>CSS</span>
+              <span>JavaScript</span>
+              <span>UI/UX</span>
+            </div>
+          </div>
+        </div>
+        <div class="project-card" data-category="institucional">
+          <div class="project-img">
+            <img src="img/tigrão.webp" alt="Capa do projeto">
+            <div class="project-overlay">
+              <a href="portfolio/tigrao.html" target="_blank" rel="noopener noreferrer" class="btn-project">Ver projeto</a>
+            </div>
+          </div>
+          <div class="project-info">
+            <h3>Institucional - Tigrão Acabamentos</h3>
+            <p>Site institucional desenvolvido para presença digital oficial da empresa Tigrão Acabamentos, com foco em autoridade, clareza de serviços e geração de contato.
+            </p>
+            <div class="tags">
+              <span>Wordpress</span>
+              <span>Elementor</span>
+              <span>CSS</span>
+              <span>JavaScript</span>
+              <span>UI/UX</span>
+            </div>
+          </div>
+        </div>
+        <div class="project-card" data-category="ecommerce">
+          <div class="project-img">
+            <img src="img/Vasconcelos.webp" alt="Capa do projeto">
+            <div class="project-overlay">
+              <a href="portfolio/vasconcelos.html" target="_blank" rel="noopener noreferrer" class="btn-project">Ver projeto</a>
+            </div>
+          </div>
+          <div class="project-info">
+            <h3>E-commerce - Loja Vasconcelos</h3>
+            <p>E-commerce oficial desenvolvido para operação comercial real, com foco em performance, experiência do usuário e estrutura escalável.
+            </p>
+            <div class="tags">
+              <span>Wordpress</span>
+              <span>Woocomerce</span>
+              <span>Elementor</span>
+              <span>MySQL</span>
+              <span>CSS</span>
+              <span>UI/UX</span>
+            </div>
+          </div>
+        </div>
+        <div class="project-card" data-category="estudo">
+          <div class="project-img">
+            <img src="img/nuvemcore.webp" alt="Projeto de Estudo NuvemCore Host">
+            <div class="project-overlay">
+              <a href="https://nuvem-core-host.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn-project">Ver projeto</a>
+            </div>
+          </div>
+          <div class="project-info">
+            <h3>Estudo: Landing Page Hosting</h3>
+            <p>Projeto de estudo focado no desenvolvimento de uma landing page profissional para um serviço fictício de hospedagem, com ênfase em layout responsivo, UI components e boas práticas de front-end.
+            </p>
+            <div class="tags">
+              <span>HTML</span>
+              <span>CSS</span>
+              <span>UI/UX</span>
+            </div>
+          </div>
+        </div>
+        <div class="project-card" data-category="estudo">
+          <div class="project-img">
+            <img src="img/newsletter.webp" alt="Projeto de Estudo NewsLetter">
+            <div class="project-overlay">
+              <a href="https://newletter-toggle.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn-project">Ver projeto</a>
+            </div>
+          </div>
+          <div class="project-info">
+            <h3>Estudo: NewsLetter</h3>
+            <p>Projeto de formulário de inscrição para newsletter com suporte a alternância de tema (Light/Dark), desenvolvido para prática de front-end e portfólio profissional.
+            </p>
+            <div class="tags">
+              <span>HTML</span>
+              <span>CSS</span>
+              <span>JavaScript</span>
+              <span>UI/UX</span>
+            </div>
+          </div>
+        </div>
+        <div class="project-card" data-category="estudo">
+          <div class="project-img">
+            <img src="img/previsaodotempo.webp" alt="Projeto de Estudo Previsão do Tempo">
+            <div class="project-overlay">
+              <a href="https://weather-forecast-tawny-nine.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn-project">Ver projeto</a>
+            </div>
+          </div>
+          <div class="project-info">
+            <h3>Estudo: Previsão do Tempo</h3>
+            <p>Aplicação front-end desenvolvida para simular a interface de uma plataforma de previsão do tempo, com foco em estrutura semântica, organização visual e construção de layout responsivo utilizando HTML5 e CSS3.
+            </p>
+            <div class="tags">
+              <span>Wordpress</span>
+              <span>Woocomerce</span>
+              <span>Elementor</span>
+              <span>MySQL</span>
+              <span>CSS</span>
+              <span>UI/UX</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+      </div>
+     </section>
+     <!------------------------------------------->
+
+         <!-- Section Services -->
+    <section aria-label="Section Services" class="services">
+      <div class="my-service">
+        <div class="service-text">
+          <h2 class="service-title">Serviços</h2>
+          <h2>Confira todos os meus serviços</h2>
+        </div>
+        <div class="services-list">
+          <ul class="navigation-secundary">
+            <li>
+              <i class="material-symbols-outlined">web_asset</i>
+              <h3>Landing Pages</h3>
+              <p>
+                Criação de páginas focadas em conversão, com estrutura
+                estratégica, carregamento rápido e layout responsivo. Ideal para
+                campanhas, lançamentos e captação de leads.
+              </p>
+            </li>
+            <li>
+              <i class="material-symbols-outlined">web</i>
+              <h3>Sites Institucionais</h3>
+              <p>
+                Construção de presença digital profissional para empresas e
+                negócios online, com foco em organização de conteúdo e
+                experiência do usuário.
+              </p>
+            </li>
+            <li>
+              <i class="material-symbols-outlined">web_stories</i>
+              <h3>Estruturas para Produtos Digitais</h3>
+              <p>
+                Desenvolvimento de páginas de vendas, páginas de captura e
+                estruturas para lançamentos e produtos perpétuos.
+              </p>
+            </li>
+            <li>
+              <i class="material-symbols-outlined">settings_applications</i>
+              <h3>Manutenção e Otimização</h3>
+              <p>Ajustes, melhorias e otimizações em páginas existentes.</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <!------------------------------------------->
+
+       <!-- Section Journey -->
+    <section aria-label="Section Timeline" class="section-timeline">
+      <div class="timeline-title">
+        <h2>Um pouco da sobre a minha jornada</h2>
+      </div>
+      <div class="timeline">
+        <div class="timeline-container container-left">
+          <span class="material-symbols-outlined"> radio_button_checked </span>
+          <div class="text-box">
+            <img src="img/design.webp" alt="" />
+            <small>2019 - 2021</small>
+            <h2>Design Gráfico</h2>
+            <p>
+              Iniciei minha trajetória profissional atuando como designer
+              gráfico, desenvolvendo habilidades voltadas para comunicação
+              visual, construção de interfaces e experiência do usuário.
+            </p>
+            <span class="left-container-arrow"></span>
+          </div>
+        </div>
+
+        <div class="timeline-container container-right">
+          <span class="material-symbols-outlined"> radio_button_checked </span>
+          <div class="text-box">
+            <img src="img/ecommerce.webp" alt="Ecommerce Loja Vasconcelos">
+            <small>2021 - Current</small>
+            <h2>Desenvolvedor Web</h2>
+            <p>
+              Atuo como desenvolvedor web na criação de sites, landing pages e
+              estruturas digitais voltadas para conversão, performance e
+              experiência do usuário que já movimentaram mais de R$5 milhões em
+              vendas.
+            </p>
+            <span class="right-container-arrow"></span>
+          </div>
+        </div>
+
+        <div class="timeline-container container-left">
+          <span class="material-symbols-outlined"> radio_button_checked </span>
+          <div class="text-box">
+            <img src="img/empreendedor.webp" alt="">
+            <small>2021 - current</small>
+            <h2>Empreendedor / Infoprodutor</h2>
+            <p>
+              Paralelamente à atuação como desenvolvedor, também desenvolvi
+              projetos próprios no mercado digital, criando produtos digitais
+              voltados para pessoas que buscavam soluções mais acessíveis para
+              presença online. Os produtos criados geraram mais de R$250 mil em
+              faturamento, resultado obtido exclusivamente com produtos
+              próprios.
+            </p>
+            <span class="left-container-arrow"></span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!------------------------------------------->
+
+    <!-- Section Skills -->
+    <section aria-label="Section Skills" class="Section Skills">
+      <div class="skills">
+        <div class="title">
+          <h2>Minhas Habilidades</h2>
+          <p>Atualmente, aprofundando meus estudos em arquitetura de software, escalabilidade e boas práticas de desenvolvimento dentro da graduação em Engenharia de Software.</p>
+        </div>
+      <div class="skill-box">
+        <div class="bar">
+          <div class="info">
+            <span><i class="fa-brands fa-html5"></i> HTML5</span>
+          </div>
+          <div class="track">
+            <div class="fill" style="--w:90%; --clr: #081F5B; --delay:0.1s">
+              <span class="tooltip">90%</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="bar">
+          <div class="info">
+            <span><i class="fa-brands fa-css3"></i> CSS3</span>
+          </div>
+          <div class="track">
+            <div class="fill" style="--w:85%; --clr: #344EAD; --delay:0.2s">
+              <span class="tooltip">85%</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="bar">
+          <div class="info">
+            <span><i class="fa-brands fa-js"></i> JavaScript</span>
+          </div>
+          <div class="track">
+            <div class="fill" style="--w:70%; --clr: #6F96D0; --delay:0.3s">
+              <span class="tooltip">70%</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="bar">
+          <div class="info">
+            <span><i class="fa-brands fa-wordpress"></i> Wordpress</span>
+          </div>
+          <div class="track">
+            <div class="fill" style="--w:80%; --clr: #424242; --delay:0.5s">
+              <span class="tooltip">80%</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="bar">
+          <div class="info">
+            <span><i class="fa-brands fa-figma"></i> Figma</span>
+          </div>
+          <div class="track">
+            <div class="fill" style="--w:70%; --clr: #3f60d9; --delay:0.4s">
+              <span class="tooltip">70%</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="bar">
+          <div class="info">
+            <span><img src="img/adobe-photoshop.svg" alt="Photoshop"> Photoshop</span>
+          </div>
+          <div class="track">
+            <div class="fill" style="--w:80%; --clr: #213fab; --delay:0.5s">
+              <span class="tooltip">80%</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+    </section>
+
+    <!-- Section About -->
+    <main>
+      <article aria-label="section about" class="about">
+        <img src="img/Sobre.webp" alt="Foto de Mardoqueu" />
+        <div class="about-content">
+          <div class="about-text">
+            <h2 class="sobre-mim">Sobre mim</h2>
+            <h2>Eu sou Mardoqueu Martins</h2>
+            <p>
+              Sou Desenvolvedor Front-End com mais de 5 anos de experiência na
+              criação de sites, landing pages e soluções digitais focadas em
+              performance, experiência do usuário e conversão. Atualmente, curso
+              Engenharia de Software, aprofundando meus conhecimentos em
+              arquitetura e desenvolvimento escalável.
+              <br />
+              <br />
+              Iniciei minha trajetória como designer gráfico e, desde 2021,
+              integro design e desenvolvimento para construir interfaces
+              modernas e orientadas a resultados. Já participei de projetos do
+              mercado digital e também atuei como empreendedor, desenvolvendo
+              produtos próprios que superaram R$250 mil em faturamento.
+              <br />
+              <br />
+              Trabalho com HTML, CSS, JavaScript, Git, GitHub, WordPress e
+              Figma, sempre priorizando organização, boas práticas e qualidade
+              técnica.
+            </p>
+          </div>
+          <div class="about-inf">
+            <p>
+              <i class="fa-solid fa-graduation-cap"></i
+              ><span>Formação:</span> Graduando em Eng. de Software
+            </p>
+            <p>
+              <i class="fa-regular fa-envelope"></i
+              ><span> E-mail:</span> dev.mardoqueumartins@gmail.com
+            </p>
+            <p>
+              <i class="fa-brands fa-whatsapp"></i><span>WhatsApp:</span> +55
+              (82) 99940-1648
+            </p>
+            <p>
+              <i class="fa-solid fa-language"></i
+              ><span>Idiomas:</span> Português, Brasil (nativo), Inglês básico.
+            </p>
+            <p>
+              <i class="fa-solid fa-location-dot"></i
+              ><span>Endereço:</span> Maceió, Alagoas, Brasil.
+            </p>
+          </div>
+        </div>
+      </article>
+    </main>
+    <!------------------------------------------->
+
+<!-- Section Footer -->
+ <footer>
+  <p>&copy; Mardoqueu Martins | Todos os direitos reservados.</p>
+ </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
