@@ -165,6 +165,8 @@ nav i.fa-bars {
 .hero-section {
     animation: inicializar .7s forwards;
     width: 100%;
+    display: flex;
+    align-items: center;
 }
 
 .hero-grid {
@@ -223,8 +225,13 @@ nav i.fa-bars {
     width: fit-content;
 }
 
-#download:hover {
+#download {
     background-color: var(--azul-medio);
+    color: var(--branco);
+}
+
+#download:hover {
+    background-color: var(--azul-escuro);
     color: var(--branco);
     border: none;
 }
@@ -240,7 +247,7 @@ nav i.fa-bars {
     max-width: 80%;
     height: auto;
     display: block;
-    padding-top: 30px;
+    padding-top: 0;
 }
 
 /* Animações */
@@ -484,7 +491,7 @@ main .about {
 .service-text h2 {
     font-size: 2rem;
     font-weight: 400;
-    color: var(--amarelo-clarinho);
+    color: var(--branco);
     line-height: 1.2;
     margin-bottom: 5px;
 }
@@ -512,6 +519,7 @@ main .about {
     flex-direction: column;
     gap: 5px;
     align-items: flex-start;
+    background-color: #ffffff11;
     border: 0.050rem solid var(--cinza-medio);
     border-radius: 5px;
     padding: 50px;
@@ -700,14 +708,22 @@ li i.material-symbols-outlined {
     max-width: 1280px;
     margin: 0 auto;
     padding: 60px 20px;
+    
 }
 
 .title {
     text-align: center;
     color: var(--azul-medio);
     font-size: 2rem;
-    margin-bottom: 30px;
     font-weight: 400;
+}
+
+.content-projects p {
+    font-size: 1.1rem;
+    font-weight: 200;
+    color: var(--cinza-escuro);
+    text-align: center;
+    margin-bottom: 15px;
 }
 
 .project-grid {
@@ -777,6 +793,7 @@ li i.material-symbols-outlined {
 .project-info p {
     font-weight: 200;
     font-size: 1rem;
+    text-align: start;
 }
 
 .tags {
@@ -968,6 +985,54 @@ footer p {
     margin: 0;
     font-size: 1rem;
     font-family: "Hilmar", sans-serif;
+}
+
+/* Intersection Observer */
+
+.hidden {
+    opacity: 0;
+    filter: blur(15px);
+    transition: all 1s;
+    
+}
+.show {
+    opacity: 1;
+    filter: blur(0);
+    transition: all 1s;
+}
+
+/* Portfólio */
+
+.project-grid :nth-child(2) {
+    transition-delay: 400ms;
+}
+
+.project-grid :nth-child(3) {
+    transition-delay: 700ms;
+}
+
+.project-grid :nth-child(4) {
+    transition-delay: 1000ms;
+}
+
+.project-grid :nth-child(5) {
+    transition-delay: 1300ms;
+}
+
+.project-grid :nth-child(6) {
+    transition-delay: 1600ms;
+}
+
+/* Serviços */
+
+.navigation-secundary :nth-child(2){
+    transition-delay: 400ms;
+}
+.navigation-secundary :nth-child(3){
+    transition-delay: 700ms;
+}
+.navigation-secundary :nth-child(4){
+    transition-delay: 1000ms;
 }
 
 /* Responsividade */
@@ -1252,12 +1317,18 @@ main .about {
     font-size: 1.6rem;
 }
 
+.content-projects > p {
+    max-width: 60%;
+    margin: 0 auto;
+    margin-bottom: 15px;
+}
+
 
 }
 
 /* Mobile */
 
-@media (max-width: 480px) {
+@media (max-width: 600px) {
 
 /* Section Hero */
 .navigation-primary.ativado {
@@ -1342,7 +1413,8 @@ main .about {
 }
 
 .timeline-title h2 {
-    max-width: 80%;
+    max-width: 60%;
+    line-height: 2rem;
     margin: 0 auto;
 }
 
@@ -1357,7 +1429,7 @@ main .about {
 }
 
 .timeline::after {
-    left: 3px;
+    left: 5px;
 }
 
 .text-box h2 {
@@ -1380,6 +1452,13 @@ main .about {
     grid-template-columns: 1fr;
 }
 
+.project-filters {
+    gap: 10px;
+}
+
+.content-projects > p {
+    max-width: 90%;
+}
 
 /* Section Skills Mobile */
 

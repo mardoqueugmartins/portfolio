@@ -15,6 +15,7 @@
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
       rel="stylesheet"
     />
+    <script src="script.js" defer></script>
     <title>Mardoqueu Martins | Web Developer</title>
   </head>
   <body>
@@ -35,7 +36,7 @@
       </div>
     </header>
 <!-- Hero Section -->
-    <section class="hero-section" id="home">
+    <section aria-label="Section Hero" class="hero-section hidden" id="home">
       <div class="container hero-grid">
         <!-- Coluna 1: Texto -->
         <div class="hero-text">
@@ -64,18 +65,19 @@
 <!------------------------------------------->
 
     <!-- Section Portfólio -->
-     <section aria-label="Section Portfólio" id="portfolio" class="section-projects">
+     <section aria-label="Section Portfólio" class="section-projects" id="portfolio">
      <div class="content-projects">
-      <h2 class="title">Alguns projetos</h2>
-      <div class="project-filters">
+      <h2 class="title hidden">Alguns projetos</h2>
+      <p class="hidden">Cada projeto aqui foi pensado para mostrar não só o visual, mas como ele resolve problemas reais:</p>
+      <div class="project-filters hidden">
         <button class="filter-btn active" data-filter="all">Todos</button>
         <button class="filter-btn" data-filter="landing">Landing Pages</button>
         <button class="filter-btn" data-filter="institucional">Institucionais</button>
         <button class="filter-btn" data-filter="ecommerce">E-commerce</button>
         <button class="filter-btn" data-filter="estudo">Projetos para Estudo</button>
       </div>
-      <div class="project-grid">
-        <div class="project-card" data-category="landing">
+      <div class="project-grid hidden">
+        <div class="project-card hidden" data-category="landing">
           <div class="project-img">
             <img src="img/ezzos.webp" loading="lazy" alt="Capa do projeto">
             <div class="project-overlay">
@@ -95,7 +97,7 @@
             </div>
           </div>
         </div>
-        <div class="project-card" data-category="institucional">
+        <div class="project-card hidden" data-category="institucional">
           <div class="project-img">
             <img src="img/tigrão.webp" loading="lazy" alt="Capa do projeto">
             <div class="project-overlay">
@@ -115,7 +117,7 @@
             </div>
           </div>
         </div>
-        <div class="project-card" data-category="ecommerce">
+        <div class="project-card hidden" data-category="ecommerce">
           <div class="project-img">
             <img src="img/Vasconcelos.webp" loading="lazy" alt="Capa do projeto">
             <div class="project-overlay">
@@ -136,7 +138,7 @@
             </div>
           </div>
         </div>
-        <div class="project-card" data-category="estudo">
+        <div class="project-card hidden" data-category="estudo">
           <div class="project-img">
             <img src="img/nuvemcore.webp" loading="lazy" alt="Projeto de Estudo NuvemCore Host">
             <div class="project-overlay">
@@ -154,7 +156,7 @@
             </div>
           </div>
         </div>
-        <div class="project-card" data-category="estudo">
+        <div class="project-card hidden" data-category="estudo">
           <div class="project-img">
             <img src="img/newsletter.webp" loading="lazy" alt="Projeto de Estudo NewsLetter">
             <div class="project-overlay">
@@ -173,7 +175,7 @@
             </div>
           </div>
         </div>
-        <div class="project-card" data-category="estudo">
+        <div class="project-card hidden" data-category="estudo">
           <div class="project-img">
             <img src="img/previsaodotempo.webp" loading="lazy" alt="Projeto de Estudo Previsão do Tempo">
             <div class="project-overlay">
@@ -201,7 +203,7 @@
      <!------------------------------------------->
 
          <!-- Section Services -->
-    <section aria-label="Section Services" class="services" id="services">
+    <section aria-label="Section Services" class="services hidden" id="services">
       <div class="my-service">
         <div class="service-text">
           <h2 class="service-title">Serviços</h2>
@@ -209,7 +211,7 @@
         </div>
         <div class="services-list">
           <ul class="navigation-secundary">
-            <li>
+            <li class="hidden">
               <i class="material-symbols-outlined">web_asset</i>
               <h3>Landing Pages</h3>
               <p>
@@ -218,7 +220,7 @@
                 campanhas, lançamentos e captação de leads.
               </p>
             </li>
-            <li>
+            <li class="hidden">
               <i class="material-symbols-outlined">web</i>
               <h3>Sites Institucionais</h3>
               <p>
@@ -227,7 +229,7 @@
                 experiência do usuário.
               </p>
             </li>
-            <li>
+            <li class="hidden">
               <i class="material-symbols-outlined">web_stories</i>
               <h3>Estruturas para Produtos Digitais</h3>
               <p>
@@ -235,7 +237,7 @@
                 estruturas para lançamentos e produtos perpétuos.
               </p>
             </li>
-            <li>
+            <li class="hidden">
               <i class="material-symbols-outlined">settings_applications</i>
               <h3>Manutenção e Otimização</h3>
               <p>Ajustes, melhorias e otimizações em páginas existentes.</p>
@@ -247,14 +249,14 @@
     <!------------------------------------------->
 
        <!-- Section Journey -->
-    <section aria-label="Section Timeline" class="section-timeline">
+    <section aria-label="Section Timeline" class="section-timeline hidden">
       <div class="timeline-title">
-        <h2>Um pouco da sobre a minha jornada</h2>
+        <h2>Um pouco sobre a minha jornada profissional</h2>
       </div>
       <div class="timeline">
         <div class="timeline-container container-left">
           <span class="material-symbols-outlined"> radio_button_checked </span>
-          <div class="text-box">
+          <div class="text-box hidden">
             <img src="img/design.webp" loading="lazy" alt="design icon" />
             <small>2019 - 2021</small>
             <h2>Design Gráfico</h2>
@@ -269,7 +271,7 @@
 
         <div class="timeline-container container-right">
           <span class="material-symbols-outlined"> radio_button_checked </span>
-          <div class="text-box">
+          <div class="text-box hidden">
             <img src="img/ecommerce.webp" loading="lazy" alt="Ecommerce Loja Vasconcelos">
             <small>2021 - Current</small>
             <h2>Desenvolvedor Web</h2>
@@ -285,7 +287,7 @@
 
         <div class="timeline-container container-left">
           <span class="material-symbols-outlined"> radio_button_checked </span>
-          <div class="text-box">
+          <div class="text-box hidden">
             <img src="img/empreendedor.webp" loading="lazy" alt="empreendedor">
             <small>2021 - current</small>
             <h2>Empreendedor / Infoprodutor</h2>
@@ -305,14 +307,14 @@
     <!------------------------------------------->
 
     <!-- Section Skills -->
-    <section aria-label="Section Skills" class="Section Skills" id="skills">
+    <section aria-label="Section Skills" class="Section Skills hidden" id="skills">
       <div class="skills">
-        <div class="title">
+        <div class="title hidden">
           <h2>Minhas Habilidades</h2>
           <p>Atualmente, aprofundando meus estudos em arquitetura de software, escalabilidade e boas práticas de desenvolvimento dentro da graduação em Engenharia de Software.</p>
         </div>
       <div class="skill-box">
-        <div class="bar">
+        <div class="bar hidden">
           <div class="info">
             <span><i class="fa-brands fa-html5"></i> HTML5</span>
           </div>
@@ -323,7 +325,7 @@
           </div>
         </div>
         
-        <div class="bar">
+        <div class="bar hidden">
           <div class="info">
             <span><i class="fa-brands fa-css3"></i> CSS3</span>
           </div>
@@ -334,7 +336,7 @@
           </div>
         </div>
 
-        <div class="bar">
+        <div class="bar hidden">
           <div class="info">
             <span><i class="fa-brands fa-js"></i> JavaScript</span>
           </div>
@@ -345,7 +347,7 @@
           </div>
         </div>
 
-        <div class="bar">
+        <div class="bar hidden">
           <div class="info">
             <span><i class="fa-brands fa-wordpress"></i> Wordpress</span>
           </div>
@@ -356,7 +358,7 @@
           </div>
         </div>
 
-        <div class="bar">
+        <div class="bar hidden">
           <div class="info">
             <span><i class="fa-brands fa-figma"></i> Figma</span>
           </div>
@@ -367,7 +369,7 @@
           </div>
         </div>
 
-        <div class="bar">
+        <div class="bar hidden">
           <div class="info">
             <span><img src="img/adobe-photoshop.svg" loading="lazy" alt="Photoshop"> Photoshop</span>
           </div>
@@ -383,7 +385,7 @@
 
     <!-- Section About -->
     <main>
-      <article aria-label="section about" class="about" id="about">
+      <article aria-label="section about" class="about hidden" id="about">
         <img src="img/Sobre.webp" loading="lazy" alt="Foto de Mardoqueu" />
         <div class="about-content">
           <div class="about-text">
@@ -441,6 +443,5 @@
   <p>&copy; Mardoqueu Martins | Todos os direitos reservados.</p>
  </footer>
 
-    <script src="script.js"></script>
   </body>
 </html>
