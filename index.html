@@ -15,7 +15,7 @@
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
       rel="stylesheet"
     />
-    <title>Portfólio</title>
+    <title>Mardoqueu Martins | Web Developer</title>
   </head>
   <body>
     <header>
@@ -23,10 +23,10 @@
         <h1>Mardoqueu <span>Martins</span></h1>
         <nav>
           <ul class="navigation-primary">
-            <li><a href="#home">Início</a></li>
-            <li><a href="#portfólio">Portfólio</a></li>
+            <li><a href="portfolio.mardoqueumartins.com.br">Início</a></li>
+            <li><a href="#portfolio">Portfólio</a></li>
             <li><a href="#services">Serviços</a></li>
-            <li><a href="#contact">Contato</a></li>
+            <li><a href="#skills">Habilidades</a></li>
             <li><a href="#about">Sobre</a></li>
           </ul>
           <a class="button-contact" href="#contact">Falar com Mardoqueu</a>
@@ -35,7 +35,7 @@
       </div>
     </header>
 <!-- Hero Section -->
-    <section class="hero-section">
+    <section class="hero-section" id="home">
       <div class="container hero-grid">
         <!-- Coluna 1: Texto -->
         <div class="hero-text">
@@ -50,21 +50,21 @@
           </p>
 
           <div class="button-hero">
-            <a id="download" href="#">Download CV</a>
-            <a id="projects" href="#">Ver Projetos</a>
+            <a id="download" href="assets/Meu Curriculo - Dev.pdf" target="_blank" type="aplication/pdf">Download CV</a>
+            <a id="projects" href="#portfolio">Ver Projetos</a>
           </div>
         </div>
 
         <!-- Coluna 2: Imagem -->
         <div class="hero-image">
-          <img src="img/Foto Mardoqueu.webp" alt="Imagem de Mardoqueu" />
+          <img src="img/Foto Mardoqueu.webp" loading="lazy" alt="Imagem de Mardoqueu" />
         </div>
       </div>
     </section>
 <!------------------------------------------->
 
     <!-- Section Portfólio -->
-     <section aria-label="Section Portfólio" class="section-projects">
+     <section aria-label="Section Portfólio" id="portfolio" class="section-projects">
      <div class="content-projects">
       <h2 class="title">Alguns projetos</h2>
       <div class="project-filters">
@@ -77,7 +77,7 @@
       <div class="project-grid">
         <div class="project-card" data-category="landing">
           <div class="project-img">
-            <img src="img/ezzos.webp" alt="Capa do projeto">
+            <img src="img/ezzos.webp" loading="lazy" alt="Capa do projeto">
             <div class="project-overlay">
               <a href="portfolio/ezzos.html" target="_blank" rel="noopener noreferrer" class="btn-project">Ver projeto</a>
             </div>
@@ -97,7 +97,7 @@
         </div>
         <div class="project-card" data-category="institucional">
           <div class="project-img">
-            <img src="img/tigrão.webp" alt="Capa do projeto">
+            <img src="img/tigrão.webp" loading="lazy" alt="Capa do projeto">
             <div class="project-overlay">
               <a href="portfolio/tigrao.html" target="_blank" rel="noopener noreferrer" class="btn-project">Ver projeto</a>
             </div>
@@ -117,7 +117,7 @@
         </div>
         <div class="project-card" data-category="ecommerce">
           <div class="project-img">
-            <img src="img/Vasconcelos.webp" alt="Capa do projeto">
+            <img src="img/Vasconcelos.webp" loading="lazy" alt="Capa do projeto">
             <div class="project-overlay">
               <a href="portfolio/vasconcelos.html" target="_blank" rel="noopener noreferrer" class="btn-project">Ver projeto</a>
             </div>
@@ -138,7 +138,7 @@
         </div>
         <div class="project-card" data-category="estudo">
           <div class="project-img">
-            <img src="img/nuvemcore.webp" alt="Projeto de Estudo NuvemCore Host">
+            <img src="img/nuvemcore.webp" loading="lazy" alt="Projeto de Estudo NuvemCore Host">
             <div class="project-overlay">
               <a href="https://nuvem-core-host.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn-project">Ver projeto</a>
             </div>
@@ -156,7 +156,7 @@
         </div>
         <div class="project-card" data-category="estudo">
           <div class="project-img">
-            <img src="img/newsletter.webp" alt="Projeto de Estudo NewsLetter">
+            <img src="img/newsletter.webp" loading="lazy" alt="Projeto de Estudo NewsLetter">
             <div class="project-overlay">
               <a href="https://newletter-toggle.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn-project">Ver projeto</a>
             </div>
@@ -175,7 +175,7 @@
         </div>
         <div class="project-card" data-category="estudo">
           <div class="project-img">
-            <img src="img/previsaodotempo.webp" alt="Projeto de Estudo Previsão do Tempo">
+            <img src="img/previsaodotempo.webp" loading="lazy" alt="Projeto de Estudo Previsão do Tempo">
             <div class="project-overlay">
               <a href="https://weather-forecast-tawny-nine.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn-project">Ver projeto</a>
             </div>
@@ -201,7 +201,7 @@
      <!------------------------------------------->
 
          <!-- Section Services -->
-    <section aria-label="Section Services" class="services">
+    <section aria-label="Section Services" class="services" id="services">
       <div class="my-service">
         <div class="service-text">
           <h2 class="service-title">Serviços</h2>
@@ -255,7 +255,7 @@
         <div class="timeline-container container-left">
           <span class="material-symbols-outlined"> radio_button_checked </span>
           <div class="text-box">
-            <img src="img/design.webp" alt="" />
+            <img src="img/design.webp" loading="lazy" alt="design icon" />
             <small>2019 - 2021</small>
             <h2>Design Gráfico</h2>
             <p>
@@ -270,7 +270,7 @@
         <div class="timeline-container container-right">
           <span class="material-symbols-outlined"> radio_button_checked </span>
           <div class="text-box">
-            <img src="img/ecommerce.webp" alt="Ecommerce Loja Vasconcelos">
+            <img src="img/ecommerce.webp" loading="lazy" alt="Ecommerce Loja Vasconcelos">
             <small>2021 - Current</small>
             <h2>Desenvolvedor Web</h2>
             <p>
@@ -286,7 +286,7 @@
         <div class="timeline-container container-left">
           <span class="material-symbols-outlined"> radio_button_checked </span>
           <div class="text-box">
-            <img src="img/empreendedor.webp" alt="">
+            <img src="img/empreendedor.webp" loading="lazy" alt="empreendedor">
             <small>2021 - current</small>
             <h2>Empreendedor / Infoprodutor</h2>
             <p>
@@ -305,7 +305,7 @@
     <!------------------------------------------->
 
     <!-- Section Skills -->
-    <section aria-label="Section Skills" class="Section Skills">
+    <section aria-label="Section Skills" class="Section Skills" id="skills">
       <div class="skills">
         <div class="title">
           <h2>Minhas Habilidades</h2>
@@ -369,7 +369,7 @@
 
         <div class="bar">
           <div class="info">
-            <span><img src="img/adobe-photoshop.svg" alt="Photoshop"> Photoshop</span>
+            <span><img src="img/adobe-photoshop.svg" loading="lazy" alt="Photoshop"> Photoshop</span>
           </div>
           <div class="track">
             <div class="fill" style="--w:80%; --clr: #213fab; --delay:0.5s">
@@ -383,8 +383,8 @@
 
     <!-- Section About -->
     <main>
-      <article aria-label="section about" class="about">
-        <img src="img/Sobre.webp" alt="Foto de Mardoqueu" />
+      <article aria-label="section about" class="about" id="about">
+        <img src="img/Sobre.webp" loading="lazy" alt="Foto de Mardoqueu" />
         <div class="about-content">
           <div class="about-text">
             <h2 class="sobre-mim">Sobre mim</h2>
