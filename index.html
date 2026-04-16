@@ -3,6 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="img/favicon.ico" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
+<meta name="description" content="Desenvolvedor Web especializado em landing pages e aplicações web modernas.">
+<meta name="keywords" content="Desenvolvedor Web, HTML, CSS, JavaScript">
+<meta name="author" content="Mardoqueu Martins">
     <link rel="stylesheet" href="style.css" />
     <link
       rel="stylesheet"
@@ -12,19 +18,18 @@
       referrerpolicy="no-referrer"
     />
     <link
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
-      rel="stylesheet"
-    />
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
     <script src="script.js" defer></script>
     <title>Mardoqueu Martins | Web Developer</title>
   </head>
   <body>
+    <!-- Header Section -->
     <header>
       <div class="container">
-        <h1>Mardoqueu <span>Martins</span></h1>
+        <h2>Mardoqueu <span>Martins</span></h2>
         <nav>
           <ul class="navigation-primary">
-            <li><a href="portfolio.mardoqueumartins.com.br">Início</a></li>
+            <li><a href="https://portfolio.mardoqueumartins.com.br">Início</a></li>
             <li><a href="#portfolio">Portfólio</a></li>
             <li><a href="#services">Serviços</a></li>
             <li><a href="#skills">Habilidades</a></li>
@@ -35,6 +40,8 @@
         </nav>
       </div>
     </header>
+    <!-- Main Section -->
+    <main>
 <!-- Hero Section -->
     <section aria-label="Section Hero" class="hero-section hidden" id="home">
       <div class="container hero-grid">
@@ -51,7 +58,7 @@
           </p>
 
           <div class="button-hero">
-            <a id="download" href="assets/Meu Curriculo - Dev.pdf" target="_blank" type="aplication/pdf">Download CV</a>
+            <a id="download" href="assets/Meu Curriculo - Dev.pdf" target="_blank">Download CV</a>
             <a id="projects" href="#portfolio">Ver Projetos</a>
           </div>
         </div>
@@ -384,8 +391,7 @@
     </section>
 
     <!-- Section About -->
-    <main>
-      <article aria-label="section about" class="about hidden" id="about">
+      <section aria-label="section about" class="about hidden" id="about">
         <picture>
           <source media="(max-width: 600px)" srcset="img/sobre-responsive.webp">
           <img src="img/Sobre.webp" loading="lazy" alt="Foto de Mardoqueu"/>
@@ -437,11 +443,10 @@
             </p>
           </div>
         </div>
-      </article>
-    </main>
+      </section>
     <!------------------------------------------->
-
-<!-- Section Footer -->
+</main>
+<!-- Footer Section -->
  <footer>
   <p>&copy; Mardoqueu Martins | Todos os direitos reservados.</p>
  </footer>
