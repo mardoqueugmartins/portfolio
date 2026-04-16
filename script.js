@@ -57,15 +57,23 @@ filterButtons.forEach(button => {
 
 // IntersectionObserver
 
+// IntersectionObserver Corrigido
+
 const myObserver = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
-      entry.target.classList.add('show')
+      entry.target.classList.add('show');
+      if (entry.target.classList.contains('skill-box')) {
+        entry.target.classList.add('active');
+        myObserver.unobserve(entry.target);
+      }
     } else {
-      entry.target.classList.remove('show')
+      if (!entry.target.classList.contains('skill-box')) {
+        entry.target.classList.remove('show');
+      }
     }
-  })
-})
-const elements = document.querySelectorAll('.hidden')
+  });
+}, { threshold: 0.2 });
 
-elements.forEach((element) => myObserver.observe(element))
+const elements = document.querySelectorAll('.hidden, .skill-box');
+elements.forEach((element) => myObserver.observe(element));

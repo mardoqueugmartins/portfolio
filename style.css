@@ -105,7 +105,7 @@ header span {
     align-items: center;
     justify-content: center;
     width: 100%;
-    gap: 50px;
+    gap: 20px;
 }
 
 nav {
@@ -341,17 +341,25 @@ main .about {
     display: grid;
     grid-template-columns: 1fr 1.2fr;
     gap: 30px;
-    align-items: start;
+    align-items: flex-start;
+    position: relative;
 }
 
+.about picture {
+    position: sticky;
+    top: 10px;
+    flex: 1;
+}
 
 .about img {
     animation: imgSection .6s ease-in-out forwards;
     cursor: pointer;
     max-width: 100%;
+    height: auto;
     border-radius: 5px;
     filter: blur();
 }
+
 
 .about img:hover {
     transition: .5s ease-in;
@@ -378,7 +386,6 @@ main .about {
     font-weight: 400;
     color: var(--amarelo-clarinho);
     line-height: 1.2;
-    margin-bottom: 5px;
 }
 
 
@@ -391,7 +398,6 @@ main .about {
     max-width: fit-content;
     text-align: left;
     border-radius: 5px;
-    margin-bottom: 10px;
 }
 
 .about-text p {
@@ -797,7 +803,12 @@ li i.material-symbols-outlined {
 }
 
 .tags {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
     margin-top: 10px;
+    gap: 10px;
+    
 }
 
 .tags span {
@@ -806,7 +817,8 @@ li i.material-symbols-outlined {
     color: var(--azul-medio);
     padding: 5px 10px;
     border-radius: 20px;
-    margin-right: 5px;
+    
+    
     
 }
 /* Abas */
@@ -871,6 +883,26 @@ li i.material-symbols-outlined {
     border-color: rgba(255, 255, 255, 0.2);
 }
 
+.skill-box.active .fill {
+    width: var(--percent);
+    animation: grow 2s cubic-bezier(0.17, 0.67, 0.83, 0.67) forwards;
+    animation-delay: var(--delay);
+}
+.skill-box.show .fill {
+    animation: grow 2s cubic-bezier(0.17, 0.67, 0.83, 0.67) forwards;
+    animation-delay: var(--delay);
+}
+
+.skill-box.show .tooltip {
+    animation: fadeIn 0.5s forwards;
+    animation-delay: calc(var(--delay));
+}
+
+.skill-box.active .tooltip {
+    animation: fadeIn 0.5s forwards;
+    animation-delay: calc(var(--delay) + 1.5s);
+}
+
 .skills .title {
     flex: 1;
     position: sticky;
@@ -930,8 +962,7 @@ li i.material-symbols-outlined {
     background: var(--clr);
     border-radius: 5px;
     position: relative;
-    animation: grow 2s cubic-bezier(0.17, 0.67, 0.83, 0.67) forwards;
-    animation-delay: var(--delay);
+    
 }
 
 .tooltip {
@@ -944,9 +975,8 @@ li i.material-symbols-outlined {
     font-weight: 400;
     padding: 3px 8px;
     opacity: 0;
-    animation: fadeIn 0.5 forwards;
-    animation-delay: calc(var(--delay) + 1.5s);
 }
+
 
 .tooltip::before {
     content: "";
@@ -1202,10 +1232,14 @@ main .about {
 main .about {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    flex-direction: column;
 }
+
+
 
 .about img {
     width: 100%;
+    position: static;
 }
 
 .about-text .sobre-mim {
@@ -1388,10 +1422,16 @@ header .container i {
 main .about {
     display: grid;
     grid-template-columns: 1fr;
+    flex-direction: column;
+}
+
+.about picture {
+    position: static;
 }
 
 .about img {
-    width: 80%;
+    width: 100%;
+    position: static;
 }
 
 /* Section Service Mobile */
@@ -1413,7 +1453,7 @@ main .about {
 }
 
 .timeline-title h2 {
-    max-width: 60%;
+    max-width: 100%;
     line-height: 2rem;
     margin: 0 auto;
 }
@@ -1463,7 +1503,9 @@ main .about {
 /* Section Skills Mobile */
 
 .skills {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
     padding: 50px 40px;
 }
 
@@ -1471,6 +1513,7 @@ main .about {
     position: relative;
     top: 0px;
 }
+
 
 /* Section Footer Mobile */
 

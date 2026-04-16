@@ -386,7 +386,10 @@
     <!-- Section About -->
     <main>
       <article aria-label="section about" class="about hidden" id="about">
-        <img src="img/Sobre.webp" loading="lazy" alt="Foto de Mardoqueu" />
+        <picture>
+          <source media="(max-width: 600px)" srcset="img/sobre-responsive.webp">
+          <img src="img/Sobre.webp" loading="lazy" alt="Foto de Mardoqueu"/>
+        </picture>
         <div class="about-content">
           <div class="about-text">
             <h2 class="sobre-mim">Sobre mim</h2>
