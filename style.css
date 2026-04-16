@@ -165,7 +165,6 @@ nav i.fa-bars {
     width: 100%;
     display: flex;
     align-items: center;
-    background-color: var(--branco);
     
 }
 
@@ -332,6 +331,11 @@ nav i.fa-bars {
 
 
 .about {
+    width: 100%;
+    background-color: var(--azul-claro);
+}
+
+.about-container {
     max-width: 1280px;
     margin: 0 auto;
     padding: 60px 20px;
@@ -340,7 +344,6 @@ nav i.fa-bars {
     gap: 30px;
     align-items: flex-start;
     position: relative;
-    background-color: var(--azul-claro);
 }
 
 .about picture {
