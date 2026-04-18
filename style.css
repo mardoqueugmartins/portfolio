@@ -156,7 +156,7 @@ nav i.fa-bars {
 }
 
 .button-contact:hover {
-    background-color: var(--azul-claro);
+    background-color: #3451bc;
 }
 
 /* Seção Hero */
@@ -1035,36 +1035,62 @@ footer p {
 /* Portfólio */
 
 .project-grid :nth-child(2) {
-    transition-delay: 400ms;
+    transition-delay: 200ms;
 }
 
 .project-grid :nth-child(3) {
-    transition-delay: 700ms;
+    transition-delay: 400ms;
 }
 
 .project-grid :nth-child(4) {
-    transition-delay: 1000ms;
+    transition-delay: 600ms;
 }
 
 .project-grid :nth-child(5) {
-    transition-delay: 1300ms;
+    transition-delay: 800ms;
 }
 
 .project-grid :nth-child(6) {
-    transition-delay: 1600ms;
+    transition-delay: 1000ms;
 }
 
 /* Serviços */
 
 .navigation-secundary :nth-child(2){
-    transition-delay: 400ms;
+    transition-delay: 200ms;
 }
 .navigation-secundary :nth-child(3){
-    transition-delay: 700ms;
+    transition-delay: 400ms;
 }
 .navigation-secundary :nth-child(4){
-    transition-delay: 1000ms;
+    transition-delay: 600ms;
 }
+
+/* WhatsApp */
+.whatsapp-float {
+  position: fixed;
+  width: 75px;
+  height: 75px;
+  bottom: 40px;
+  right: 40px;
+  background-color: #25d366;
+  color: #FFF; /* Cor do ícone branca */
+  border-radius: 50px;
+  text-align: center;
+  font-size: 35px; /* Tamanho do ícone */
+  box-shadow: 2px 2px 3px #999;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.whatsapp-float:hover {
+  background-color: #1ec15a;
+  color: #FFF;
+}
+
 
 /* Responsividade */
 /* Laptop */
