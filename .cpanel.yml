@@ -1,5 +1,6 @@
 ---
+# Publica o build do Vite (pasta dist/). Rode `npm run build` antes do deploy.
 deployment:
   tasks:
     - export DEPLOYPATH=/home/mardoque/portfolio.mardoqueumartins.com.br
-    - /bin/cp -r * $DEPLOYPATH
+    - /bin/cp -r dist/. $DEPLOYPATH
