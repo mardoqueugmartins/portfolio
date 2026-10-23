@@ -1,0 +1,9 @@
+node_modules
+dist
+*.local
+.DS_Store
+.vscode/*
+!.vscode/extensions.json
+
+# Materiais de briefing (copy, paleta, fotos originais): não vão para o repositório público
+arquivos/
