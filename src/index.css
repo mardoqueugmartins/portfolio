@@ -35,6 +35,14 @@
   --animate-drift: drift 18s ease-in-out infinite alternate;
   --animate-drift-slow: drift 26s ease-in-out infinite alternate-reverse;
   --animate-marquee: marquee 40s linear infinite;
+  --animate-flip-in: flip-in 0.9s cubic-bezier(0.16, 1, 0.3, 1) both;
+
+  @keyframes flip-in {
+    from {
+      opacity: 0;
+      transform: translate3d(0, 40%, 0) rotateX(-90deg);
+    }
+  }
 
   @keyframes drift {
     0% {

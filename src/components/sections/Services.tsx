@@ -14,7 +14,7 @@ export function Services() {
   const { scrollYProgress } = useScroll({ target: stackRef, offset: ['start start', 'end end'] })
 
   return (
-    <section id="servicos" aria-labelledby="servicos-titulo" className="bg-surface py-20 sm:py-28">
+    <section id="servicos" aria-labelledby="servicos-titulo" className="bg-surface pt-20 pb-32 sm:pt-28 sm:pb-40">
       <div className="container-page grid gap-12 lg:grid-cols-[0.85fr_1.15fr] lg:gap-16">
         <div className="lg:sticky lg:top-32 lg:self-start">
           <SectionHeading

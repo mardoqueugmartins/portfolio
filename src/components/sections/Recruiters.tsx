@@ -16,7 +16,7 @@ export function Recruiters() {
     <section
       id="recrutadores"
       aria-labelledby="recrutadores-titulo"
-      className="relative isolate overflow-hidden bg-ink py-24 text-white sm:py-32"
+      className="relative isolate -mt-10 overflow-hidden rounded-t-[2.5rem] bg-ink py-24 text-white sm:-mt-14 sm:rounded-t-[3.5rem] sm:py-32"
     >
       <div aria-hidden className="absolute inset-0 -z-10">
         <div className="absolute -top-1/3 right-[-10%] size-[50vmax] animate-drift-slow rounded-full bg-primary/30 blur-[120px]" />

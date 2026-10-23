@@ -11,7 +11,7 @@ export function Contact() {
     <section
       id="contato"
       aria-labelledby="contato-titulo"
-      className="relative isolate overflow-hidden bg-primary-dark py-28 text-white sm:py-40"
+      className="relative isolate -mt-10 overflow-hidden rounded-t-[2.5rem] bg-primary-dark py-28 text-white sm:-mt-14 sm:rounded-t-[3.5rem] sm:py-40"
     >
       <div aria-hidden className="absolute inset-0 -z-10">
         <div className="absolute -right-1/4 -bottom-1/2 size-[70vmax] animate-drift rounded-full bg-gradient-blue opacity-60 blur-[140px]" />

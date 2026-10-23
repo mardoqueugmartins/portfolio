@@ -24,11 +24,15 @@ function ScrollManager() {
       return
     }
     const id = decodeURIComponent(hash.slice(1))
-    // Espera o React pintar a página de destino antes de procurar a seção
-    const frame = requestAnimationFrame(() => {
+    // A seção pode estar num chunk que ainda está carregando: tenta por até 3 s
+    let frame = 0
+    const deadline = performance.now() + 3000
+    const find = () => {
       const el = document.getElementById(id)
       if (el) scrollToTarget(el)
-    })
+      else if (performance.now() < deadline) frame = requestAnimationFrame(find)
+    }
+    frame = requestAnimationFrame(find)
     return () => cancelAnimationFrame(frame)
   }, [pathname, hash, key])
 

@@ -9,7 +9,7 @@ export function Faq() {
   const [openIndex, setOpenIndex] = useState<number | null>(0)
 
   return (
-    <section aria-labelledby="perguntas-titulo" className="py-20 sm:py-28">
+    <section aria-labelledby="perguntas-titulo" className="pt-20 pb-32 sm:pt-28 sm:pb-40">
       <div className="container-page grid gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:gap-20">
         <SectionHeading id="perguntas" title="Perguntas frequentes" />
         <ul className="border-t border-border">

@@ -5,6 +5,7 @@ import { Link, useLocation } from 'react-router'
 import { nav, site } from '../../data/site'
 import { lockScroll } from '../../lib/smooth-scroll'
 import { buttonClass } from '../ui/buttonClass'
+import { ScrambleText } from '../ui/ScrambleText'
 
 const ease = [0.16, 1, 0.3, 1] as const
 
@@ -80,7 +81,7 @@ export function Header() {
                     to={{ pathname: '/', hash: item.hash }}
                     className="rounded-full px-4 py-2 text-[0.92rem] font-medium text-white/70 transition-colors hover:bg-white/10 hover:text-white"
                   >
-                    {item.label}
+                    <ScrambleText text={item.label} />
                   </Link>
                 </li>
               ))}

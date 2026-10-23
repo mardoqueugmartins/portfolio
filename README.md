@@ -21,8 +21,10 @@ Produção: https://portfolio.mardoqueumartins.com.br
 - **Projetos em trilha horizontal guiada pelo scroll.** No desktop a seção fica fixa e os cards deslizam conforme a página rola. A rolagem vertical é 1:1 com o deslocamento horizontal, então o foco por teclado também leva o card até a tela. No mobile, com tela baixa ou com `prefers-reduced-motion`, vira uma grade comum.
 - **Conteúdo separado da interface.** Todos os textos ficam em `src/data`. O que ainda falta preencher está marcado como `PENDENTE` e aparece destacado na página.
 - **Privacidade por padrão.** Nenhum script, fonte ou imagem de terceiros, e nenhum cookie de rastreamento. O aviso de consentimento registra a versão dos termos aceita e reaparece quando eles mudam.
-- **Animações com propósito.** Título do hero revelado palavra por palavra, brilho que segue o cursor, números que contam ao aparecer, frase que acende com a rolagem, serviços em cards que se empilham e foto revelada por máscara. Tudo é desligado com `prefers-reduced-motion`, inclusive a rolagem suave.
-- **Performance.** Imagens em WebP com dimensões explícitas, fontes variáveis com `unicode-range`, páginas legais e de case em chunks separados.
+- **Shader WebGL escrito à mão no hero.** Ruído fractal com distorção de domínio nas cores da marca, que reage ao cursor. Renderiza em meia resolução, pausa fora da tela e com a aba oculta, inicia só quando o navegador está ocioso e não roda no celular nem com `prefers-reduced-motion` (aí ficam blobs em CSS).
+- **Seção "do código ao site" guiada pelo scroll.** O código é digitado, a prévia se monta em estrutura, estilo e interação, e termina com as notas reais do case BCRS no Lighthouse.
+- **Outros efeitos:** título do hero em 3D letra por letra (CSS puro), cards flutuantes com profundidade, faixa gigante que acelera com a velocidade do scroll, cards com inclinação 3D e brilho no cursor, menu com efeito de decodificação, números que contam, serviços empilhados e seções que deslizam por cima. Tudo respeita `prefers-reduced-motion`.
+- **Performance medida.** Lighthouse local (outubro de 2026): 100 / 98 / 100 / 100 no computador e 93–94 de desempenho no celular, com 98 / 100 / 100 nas demais categorias. As seções abaixo da dobra ficam num chunk separado, carregado depois do hero.
 
 ## Estrutura
 

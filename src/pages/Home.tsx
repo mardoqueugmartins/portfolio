@@ -1,14 +1,9 @@
-import { About } from '../components/sections/About'
-import { Contact } from '../components/sections/Contact'
-import { Faq } from '../components/sections/Faq'
+import { lazy, Suspense } from 'react'
 import { Hero } from '../components/sections/Hero'
-import { Projects } from '../components/sections/Projects'
-import { Recruiters } from '../components/sections/Recruiters'
-import { Services } from '../components/sections/Services'
-import { Statement } from '../components/sections/Statement'
 import { Stats } from '../components/sections/Stats'
-import { Timeline } from '../components/sections/Timeline'
 import { useDocumentTitle } from '../hooks/useDocumentTitle'
+
+const HomeBelowFold = lazy(() => import('./HomeBelowFold'))
 
 export default function Home() {
   useDocumentTitle()
@@ -16,15 +11,9 @@ export default function Home() {
     <>
       <Hero />
       <Stats />
-      <Statement />
-      <Projects />
-      <Services />
-      {/* <Testimonials /> volta quando houver ao menos dois depoimentos reais (src/data/content.ts) */}
-      <Recruiters />
-      <Timeline />
-      <About />
-      <Faq />
-      <Contact />
+      <Suspense fallback={<div className="min-h-screen bg-ink" />}>
+        <HomeBelowFold />
+      </Suspense>
     </>
   )
 }
