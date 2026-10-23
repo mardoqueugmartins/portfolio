@@ -20,7 +20,7 @@ export const site = {
     whatsapp: `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`,
     email: `mailto:${email}?subject=${encodeURIComponent(emailSubject)}`,
     github: 'https://github.com/mardoqueugmartins',
-    linkedin: PENDENTE,
+    linkedin: 'https://www.linkedin.com/in/mardoqueumartins/',
     cv: '/mardoqueu-martins-cv.pdf',
   },
 } as const

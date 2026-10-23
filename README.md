@@ -58,4 +58,4 @@ O build gera arquivos estáticos em `dist/`.
 
 ## Antes de publicar
 
-Procure por `PENDENTE` em `src/data` e preencha: número de projetos entregues, link do LinkedIn, instituição e previsão de conclusão da graduação, depoimentos, prazos do FAQ e o conteúdo das páginas de case.
+Procure por `PENDENTE` em `src/data/projects.ts` e preencha o conteúdo das páginas de case (papel, ano, desafio, decisões e resultado). A seção de depoimentos está oculta e volta quando houver depoimentos reais em `src/data/content.ts`.

@@ -80,7 +80,7 @@ export const stack = [
 export const education = {
   course: 'Engenharia de Software',
   institution: 'Cruzeiro do Sul',
-  conclusion: '2029',
+  conclusion: 'dezembro de 2029',
   languages: 'Português (nativo), Inglês (básico)',
 }
 
@@ -96,7 +96,7 @@ export const timeline = [
     text: 'Desenvolvo sites, landing pages e lojas virtuais para empresas e marcas. As páginas que construí já movimentaram mais de R$ 5 milhões em vendas para os clientes.',
   },
   {
-    period: `${PENDENTE} – 2029 (previsão)`,
+    period: 'Fev. 2026 – dez. 2029 (previsão)',
     title: 'Graduação em Engenharia de Software',
     text: 'Aprofundando arquitetura de software, estrutura de dados e boas práticas de desenvolvimento.',
   },
