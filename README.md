@@ -1,124 +1,61 @@
-# 💼 Portfólio — Mardoqueu Martins
+# Portfólio — Mardoqueu Martins
 
-Aplicação web desenvolvida para consolidar minha presença digital profissional, apresentar projetos reais e gerar oportunidades de contratação.
+Site pessoal de **Mardoqueu Martins, desenvolvedor front-end** em Maceió/AL. Ele tem dois públicos: clientes que procuram sites e landing pages, e recrutadores avaliando candidatos para vagas de front-end.
 
 Produção: https://portfolio.mardoqueumartins.com.br
 
----
+## Stack
 
-##  Visão Estratégica
+| Camada     | Escolha                                                                 |
+| ---------- | ----------------------------------------------------------------------- |
+| Base       | React 19 + TypeScript (modo estrito) + Vite                             |
+| Estilo     | Tailwind CSS v4 com tokens semânticos da marca (`src/index.css`)        |
+| Animação   | Motion (Framer Motion) com `LazyMotion`, vinculada ao scroll            |
+| Rotas      | React Router, com páginas secundárias carregadas sob demanda            |
+| Tipografia | Space Grotesk (títulos) e Inter (texto), auto-hospedadas via Fontsource |
+| Qualidade  | ESLint, Prettier (com ordenação de classes do Tailwind)                 |
 
-Este portfólio foi projetado com três objetivos principais:
+## Decisões que valem destacar
 
-1. Gerar oportunidades de contratação por empresas
-2. Atrair potenciais clientes para projetos freelance
-3. Colocar em prática todas as habilidades que estou desenvolvendo
+- **Uma rota para cada público.** O hero oferece dois caminhos: o cliente vai para Serviços e o recrutador para a seção dele, com currículo, stack e formação.
+- **Projetos em trilha horizontal guiada pelo scroll.** No desktop a seção fica fixa e os cards deslizam conforme a página rola. A rolagem vertical é 1:1 com o deslocamento horizontal, então o foco por teclado também leva o card até a tela. No mobile, com tela baixa ou com `prefers-reduced-motion`, vira uma grade comum.
+- **Conteúdo separado da interface.** Todos os textos ficam em `src/data`. O que ainda falta preencher está marcado como `PENDENTE` e aparece destacado na página.
+- **Privacidade por padrão.** Nenhum script, fonte ou imagem de terceiros, e nenhum cookie de rastreamento. O aviso de consentimento registra a versão dos termos aceita e reaparece quando eles mudam.
+- **Performance.** Imagens em WebP com dimensões explícitas, fontes variáveis com `unicode-range`, páginas legais e de case em chunks separados.
 
-A estrutura foi pensada para unir clareza técnica, identidade profissional e experiência intuitiva.
+## Estrutura
 
----
+```
+src/
+  components/
+    layout/     Header, Footer, aviso de consentimento, Layout
+    sections/   Seções da home (Hero, Projects, Services…)
+    ui/         Botões, ícones, marcador de PENDENTE
+  data/         Copy, projetos e dados de contato
+  hooks/        useMediaQuery, useDocumentTitle
+  lib/          Contexto de consentimento (LGPD)
+  pages/        Home, Case, 404 e páginas legais
+public/         Currículo, og:image, favicon, .htaccess, robots e sitemap
+```
 
-##  Objetivo do Projeto
+## Rodando localmente
 
-Criar uma plataforma pessoal que:
+```bash
+npm install
+npm run dev        # servidor de desenvolvimento
+npm run build      # checagem de tipos + build de produção em dist/
+npm run preview    # serve o build
+npm run lint
+npm run format
+```
 
-- Apresente projetos reais desenvolvidos
-- Destaque habilidades técnicas de forma organizada
-- Demonstre domínio de front-end
-- Seja performática e responsiva
-- Transmita profissionalismo e maturidade técnica
+## Deploy
 
-O foco não foi apenas visual, mas estratégico: comunicar competência com simplicidade.
+O build gera arquivos estáticos em `dist/`.
 
----
+- **cPanel/Apache:** `.cpanel.yml` copia `dist/` para a pasta do subdomínio. Rode `npm run build` antes do deploy. O `public/.htaccess` redireciona as rotas da SPA para o `index.html`.
+- **Vercel:** `vercel.json` já tem o rewrite das rotas. Basta importar o repositório.
 
-##  Stack Utilizada
+## Antes de publicar
 
-- **HTML5** — Estruturação semântica
-- **CSS3** — Layout responsivo e animações
-- **JavaScript** — Interatividade e comportamento dinâmico
-- **Git & GitHub** — Versionamento via terminal (VSCode)
-- **Deploy em hospedagem própria (subdomínio personalizado)**
-
----
-
-##  Arquitetura e Organização
-
-A aplicação foi construída priorizando:
-
-- Separação clara entre estrutura, estilo e comportamento
-- Código organizado e legível
-- Escalabilidade para futuras atualizações
-- Estrutura modular
-
----
-
-## O projeto está em constante evolução, recebendo melhorias estruturais e refinamentos visuais.
-
----
-
-##  Experiência e Interface
-
-O design foi desenvolvido com foco em:
-
-- Navegação intuitiva
-- Hierarquia visual clara
-- Leitura fluida
-- Layout moderno
-- Animações sutis para enriquecer a experiência
-
-As animações foram implementadas para adicionar dinamismo sem comprometer performance.
-
----
-
-##  Performance
-
-- Código otimizado
-- Estrutura leve
-- Carregamento rápido
-- Sem dependência de frameworks pesados
-
-A prioridade foi manter alto desempenho mesmo em conexões mais lentas.
-
----
-
-## Responsividade
-
-O portfólio é totalmente adaptável para:
-
-- Desktop
-- Mobile
-- Tablet
-
-Com foco em consistência visual e usabilidade.
-
----
-
-## Ambiente de Produção
-
-Publicado em subdomínio próprio:
-
-https://portfolio.mardoqueumartins.com.br
-
-Isso demonstra:
-
-- Capacidade de deploy em ambiente  (Fiz diretamente do VsCode > Github > Cpanel)
-- Configuração de domínio
-- Publicação e manutenção contínua
-
----
-
-## Evolução Contínua
-
-O projeto está em constante aprimoramento, com foco em:
-
-- Melhorias de UX
-- Refinamento visual
-- Inclusão de novos projetos
-- Otimizações de performance
-
----
-
-## Sobre o Desenvolvedor
-
-Desenvolvido por **Mardoqueu Martins**, desenvolvedor web, organização estrutural e construção de interfaces claras, performáticas e orientadas à experiência do usuário.
+Procure por `PENDENTE` em `src/data` e preencha: número de projetos entregues, link do LinkedIn, instituição e previsão de conclusão da graduação, depoimentos, prazos do FAQ e o conteúdo das páginas de case.
