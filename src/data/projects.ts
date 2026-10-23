@@ -6,7 +6,6 @@ import nuvemcore from '../assets/projects/nuvemcore.webp'
 import newsletter from '../assets/projects/newsletter.webp'
 import previsao from '../assets/projects/previsao-do-tempo.webp'
 import taskflow from '../assets/projects/taskflow.webp'
-import { PENDENTE } from './site'
 
 export type ProjectCategory = 'landing' | 'institucional' | 'ecommerce' | 'laboratorio'
 
@@ -25,15 +24,18 @@ export const categoryLabel: Record<ProjectCategory, string> = {
   laboratorio: 'Laboratório',
 }
 
-/** Conteúdo da página de case (modelo 4.1 da copy). */
+/**
+ * Conteúdo da página de case (modelo 4.1 da copy).
+ * Campos opcionais sem informação confirmada ficam de fora da página.
+ */
 export type CaseStudy = {
   client: string
-  role: string
+  role?: string
   year: string
-  challenge: string
+  challenge?: string
   decisions: string[]
-  result: string
-  testimonial: { quote: string; author: string }
+  result?: string
+  testimonial?: { quote: string; author: string }
 }
 
 export type Project = {
@@ -49,16 +51,6 @@ export type Project = {
   caseStudy?: CaseStudy
 }
 
-const pendingCase = (client: string): CaseStudy => ({
-  client,
-  role: PENDENTE,
-  year: PENDENTE,
-  challenge: PENDENTE,
-  decisions: [PENDENTE, PENDENTE, PENDENTE],
-  result: PENDENTE,
-  testimonial: { quote: PENDENTE, author: PENDENTE },
-})
-
 /** Projetos de clientes primeiro, depois o laboratório. */
 export const projects: Project[] = [
   {
@@ -71,7 +63,18 @@ export const projects: Project[] = [
     tags: ['WordPress', 'Elementor', 'CSS', 'JavaScript', 'UI/UX'],
     cover: ezzos,
     liveUrl: 'https://ezzos.com.br/',
-    caseStudy: pendingCase('Ezzos'),
+    caseStudy: {
+      client: 'Ezzos',
+      role: 'Design da interface, desenvolvimento em WordPress com Elementor e publicação',
+      year: '2023',
+      challenge:
+        'A Ezzos é uma agência de tráfego pago de Goiânia. Ela precisava de uma página que fizesse o que promete aos próprios clientes: transformar visita em contato. O público são donos de empresa sem tempo, que precisam entender rápido o que a agência faz e confiar nela antes de chamar.',
+      decisions: [
+        'Organizei a página como um argumento de venda: primeiro o problema que o empresário sente, depois a prova, com quatro casos de setores diferentes (e-commerce, clínica, indústria e pousada), e só então o método. Assim o visitante chega ao método já convencido de que ele funciona.',
+        'Dei rosto à agência com uma seção sobre o fundador e uma vitrine de marcas atendidas. Em serviços de marketing, a confiança na pessoa pesa tanto quanto o portfólio.',
+        'Repeti a chamada para ação ao longo da página, para quem se convence no meio do caminho não precisar rolar até o fim. A página tem nota 100 em SEO no Lighthouse.',
+      ],
+    },
   },
   {
     slug: 'tigrao-acabamentos',
@@ -83,7 +86,19 @@ export const projects: Project[] = [
     tags: ['WordPress', 'Elementor', 'CSS', 'JavaScript', 'UI/UX'],
     cover: tigrao,
     liveUrl: 'https://tigraoacabamentos.com.br/',
-    caseStudy: pendingCase('Tigrão Acabamentos'),
+    caseStudy: {
+      client: 'Tigrão Acabamentos',
+      role: 'Design da interface, desenvolvimento e publicação',
+      year: '2024',
+      challenge:
+        'Empresa familiar de acabamentos que atua desde a década de 70, com três lojas (Centro, Guarus e Cidade Jardim) e dezenas de marcas, mas sem uma presença digital que organizasse isso. Quem procurava a loja na internet não encontrava os produtos, as unidades nem um jeito fácil de pedir orçamento.',
+      decisions: [
+        'Coloquei os diferenciais logo no início (qualidade, variedade, atendimento e parceria com arquitetos), porque quem compra acabamento compara lojas antes de decidir aonde ir.',
+        'Criei uma seção de inspirações com ambientes prontos, para o cliente se imaginar com o produto, e uma vitrine das marcas revendidas, que já são conhecidas e passam confiança.',
+        'Em vez de colocar o catálogo inteiro no site, criei o botão “Quero ver os catálogos”, que leva a conversa direto para o atendimento. Cada unidade ganhou seu próprio botão de contato.',
+      ],
+      result: 'Nota 90 de desempenho no computador, medida pelo Lighthouse em outubro de 2026.',
+    },
   },
   {
     slug: 'cafe-vasconcelos',
@@ -95,7 +110,17 @@ export const projects: Project[] = [
     tags: ['WordPress', 'WooCommerce', 'Elementor', 'MySQL', 'CSS', 'UI/UX'],
     cover: vasconcelos,
     liveUrl: 'https://lojavasconcelos.com.br/',
-    caseStudy: pendingCase('Café Vasconcelos'),
+    caseStudy: {
+      client: 'Café Vasconcelos',
+      year: '2025',
+      decisions: [
+        'Organizei o catálogo pelo que o cliente procura (café, cappuccino, cápsulas, máquinas, xícaras e acessórios), com o menu e o carrinho sempre à vista.',
+        'Pensei a compra para o celular: do produto ao checkout em poucos toques.',
+        'Montei a loja em WooCommerce para a própria equipe cadastrar produtos e preços sem depender de um desenvolvedor.',
+      ],
+      result:
+        'Nota 97 de desempenho no computador, com a página principal carregando em 1 segundo, medida pelo Lighthouse em outubro de 2026.',
+    },
   },
   {
     slug: 'bcrs-advocacia',
@@ -104,10 +129,23 @@ export const projects: Project[] = [
     kind: 'escritório de advocacia',
     summary:
       'Landing page para um escritório de advocacia multidisciplinar, construída com React e Tailwind a partir de um design system extraído da identidade do escritório.',
-    tags: ['React', 'Tailwind CSS', 'Vite', 'Design System'],
+    tags: ['React', 'Tailwind CSS', 'Vite', 'Motion', 'Design System'],
     cover: bcrs,
     liveUrl: 'https://bcrs-lp-civel.vercel.app',
-    caseStudy: pendingCase('Barreto, Carlos, Rossoni e Souza'),
+    caseStudy: {
+      client: 'Barreto, Carlos, Rossoni e Souza',
+      role: 'Design system, design da interface, desenvolvimento e publicação',
+      year: '2026',
+      challenge:
+        'Escritório de advocacia de Atibaia (SP), com atuação em Direito Civil, Família e Sucessões e Direito Imobiliário. A página precisava atender quem está passando por um problema jurídico, muitas vezes num momento difícil: entender rápido se o escritório pode ajudar e falar com ele sem burocracia.',
+      decisions: [
+        'Extraí um design system da identidade do escritório (cores, tipografia e o monograma BCRS) e construí a página sobre ele, para o site parecer uma extensão do escritório e não um modelo genérico.',
+        'Ofereci dois caminhos de contato: WhatsApp para quem prefere conversar e um formulário para quem quer enviar o caso por escrito. O formulário chega no e-mail do escritório e tem proteção contra spam. Ao lado ficam as avaliações reais do Google, que se atualizam sozinhas.',
+        'Desenvolvi em React, Vite e Tailwind, com animações ligadas ao scroll que se desligam para quem prefere menos movimento, e com as fontes servidas pelo próprio site.',
+      ],
+      result:
+        'No Lighthouse, a página tem nota 97 de desempenho no celular e 100 no computador, além de 100 em SEO e em boas práticas e 96 em acessibilidade. Foi desenvolvida em 3 dias.',
+    },
   },
   {
     slug: 'nuvemcore',

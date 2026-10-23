@@ -1,9 +1,7 @@
 import { ArrowLeft, ArrowUpRight } from 'lucide-react'
 import { Link, useParams } from 'react-router'
 import { ButtonLink } from '../components/ui/Button'
-import { WithPending } from '../components/ui/Pending'
 import { caseProjects } from '../data/projects'
-import { isPendente } from '../data/site'
 import { useDocumentTitle } from '../hooks/useDocumentTitle'
 import NotFound from './NotFound'
 
@@ -23,7 +21,7 @@ export default function CaseStudy() {
     { label: 'Meu papel', value: cs.role },
     { label: 'Stack', value: project.tags.join(', ') },
     { label: 'Ano', value: cs.year },
-  ]
+  ].filter((f): f is { label: string; value: string } => Boolean(f.value))
 
   return (
     <article className="pt-28 pb-20 lg:pt-36">
@@ -60,9 +58,7 @@ export default function CaseStudy() {
               {facts.map((f) => (
                 <div key={f.label} className="py-4">
                   <dt className="text-sm font-semibold text-primary-dark">{f.label}</dt>
-                  <dd className="mt-1 text-text-muted">
-                    <WithPending text={f.value} />
-                  </dd>
+                  <dd className="mt-1 text-text-muted">{f.value}</dd>
                 </div>
               ))}
             </dl>
@@ -75,35 +71,35 @@ export default function CaseStudy() {
         </div>
 
         <div className="prose-page mt-16">
-          <h2>O desafio</h2>
-          <p>
-            <WithPending text={cs.challenge} />
-          </p>
+          {cs.challenge && (
+            <>
+              <h2>O desafio</h2>
+              <p>{cs.challenge}</p>
+            </>
+          )}
 
           <h2>O que eu fiz</h2>
           <ul>
             {cs.decisions.map((d, i) => (
-              <li key={i}>
-                <WithPending text={d} />
-              </li>
+              <li key={i}>{d}</li>
             ))}
           </ul>
 
-          <h2>Resultado</h2>
-          <p>
-            <WithPending text={cs.result} />
-          </p>
+          {cs.result && (
+            <>
+              <h2>Resultado</h2>
+              <p>{cs.result}</p>
+            </>
+          )}
 
-          {!isPendente(cs.testimonial.quote) && (
+          {cs.testimonial && (
             <>
               <h2>Depoimento do cliente</h2>
               <figure className="border-l-2 border-accent pl-6">
                 <blockquote className="font-display text-xl leading-snug text-primary-dark">
-                  “<WithPending text={cs.testimonial.quote} />”
+                  “{cs.testimonial.quote}”
                 </blockquote>
-                <figcaption className="mt-3 text-sm text-text-muted">
-                  — <WithPending text={cs.testimonial.author} />
-                </figcaption>
+                <figcaption className="mt-3 text-sm text-text-muted">— {cs.testimonial.author}</figcaption>
               </figure>
             </>
           )}

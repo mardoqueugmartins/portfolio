@@ -58,4 +58,4 @@ O build gera arquivos estáticos em `dist/`.
 
 ## Antes de publicar
 
-Procure por `PENDENTE` em `src/data/projects.ts` e preencha o conteúdo das páginas de case (papel, ano, desafio, decisões e resultado). A seção de depoimentos está oculta e volta quando houver depoimentos reais em `src/data/content.ts`.
+Os cases ficam em `src/data/projects.ts`. Campos opcionais sem informação confirmada (papel, desafio, resultado, depoimento) simplesmente não aparecem na página. A seção de depoimentos da home está oculta e volta quando houver depoimentos reais em `src/data/content.ts`.
