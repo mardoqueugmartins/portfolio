@@ -1,10 +1,10 @@
 import { PENDENTE } from './site'
 
 export const stats = [
-  { value: '+5 anos', label: 'criando para a web, do design ao código' },
-  { value: '+R$ 5 milhões', label: 'em vendas movimentadas por páginas que desenvolvi' },
-  { value: '+R$ 250 mil', label: 'faturados com produtos digitais próprios' },
-  { value: '+500 projetos', label: 'entregues para clientes' },
+  { prefix: '+', value: 5, suffix: ' anos', label: 'criando para a web, do design ao código' },
+  { prefix: '+R$ ', value: 5, suffix: ' milhões', label: 'em vendas movimentadas por páginas que desenvolvi' },
+  { prefix: '+R$ ', value: 250, suffix: ' mil', label: 'faturados com produtos digitais próprios' },
+  { prefix: '+', value: 500, suffix: ' projetos', label: 'entregues para clientes' },
 ]
 
 export const services = [
@@ -71,6 +71,7 @@ export const stack = [
     group: 'Front-end',
     items: ['HTML5', 'CSS3', 'JavaScript (ES6+)', 'React', 'Tailwind CSS', 'Design responsivo'],
   },
+  { group: 'Back-end', items: ['Node.js', 'Express', 'TypeScript'] },
   { group: 'CMS e e-commerce', items: ['WordPress', 'Elementor', 'WooCommerce'] },
   { group: 'Design', items: ['Figma', 'Photoshop', 'UI/UX'] },
   { group: 'Ferramentas', items: ['Git', 'GitHub', 'Vite', 'Vercel'] },

@@ -10,7 +10,7 @@ const emailSubject = 'Projeto de site — via portfólio'
 
 export const site = {
   name: 'Mardoqueu Martins',
-  role: 'Desenvolvedor Front-End',
+  role: 'Desenvolvedor Full Stack',
   location: 'Maceió, AL',
   url: 'https://portfolio.mardoqueumartins.com.br',
   email,

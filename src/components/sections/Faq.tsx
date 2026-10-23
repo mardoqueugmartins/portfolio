@@ -41,7 +41,7 @@ function FaqItem({ question, answer, open, onToggle }: FaqItemProps) {
           aria-expanded={open}
           aria-controls={`${id}-a`}
           onClick={onToggle}
-          className="flex w-full items-center justify-between gap-6 py-6 text-left font-display text-lg font-semibold text-primary-dark sm:text-xl"
+          className="flex w-full items-center justify-between gap-6 py-6 text-left font-display text-lg font-semibold text-ink transition-colors hover:text-primary sm:text-xl"
         >
           {question}
           <Plus

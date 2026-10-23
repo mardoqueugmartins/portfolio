@@ -1,27 +1,29 @@
 @import 'tailwindcss';
 @import '@fontsource-variable/space-grotesk';
 @import '@fontsource-variable/inter';
+@import 'lenis/dist/lenis.css';
 
 @theme {
-  /* Marca */
+  /* Azuis da marca */
   --color-primary: #344ead;
   --color-primary-hover: #273c8a;
   --color-primary-dark: #081f5b;
   --color-accent: #6f96d0;
+  --color-ice: #bbd6eb;
 
   /* Superfícies */
   --color-bg: #ffffff;
-  --color-surface: #f5f4f9;
-  --color-surface-blue: #d0e4ff;
-  --color-surface-warm: #fff9ef;
-  --color-border: #d9d9d9;
+  --color-surface: #edf0f5;
+  --color-ink: #10122c;
+  --color-border: #d9dee8;
 
-  /* Texto */
-  --color-text: #0f172a;
+  /* Texto. Os parágrafos usam #5F6B7A em vez do #969696 da paleta: contraste 5,4:1 contra 2,9:1 */
+  --color-text: #10122c;
   --color-text-muted: #5f6b7a;
-  --color-text-on-dark: #ffffff;
 
-  /* Utilitárias */
+  /* Conversão */
+  --color-cta: #45ae48;
+  --color-cta-end: #2e9e16;
   --color-whatsapp: #25d366;
   --color-whatsapp-hover: #1ec15a;
 
@@ -29,19 +31,34 @@
   --font-sans: 'Inter Variable', 'Inter', system-ui, sans-serif;
 
   --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+
+  --animate-drift: drift 18s ease-in-out infinite alternate;
+  --animate-drift-slow: drift 26s ease-in-out infinite alternate-reverse;
+  --animate-marquee: marquee 40s linear infinite;
+
+  @keyframes drift {
+    0% {
+      transform: translate3d(0, 0, 0) scale(1);
+    }
+    50% {
+      transform: translate3d(8%, -6%, 0) scale(1.12);
+    }
+    100% {
+      transform: translate3d(-6%, 8%, 0) scale(0.95);
+    }
+  }
+
+  @keyframes marquee {
+    to {
+      transform: translate3d(-50%, 0, 0);
+    }
+  }
 }
 
 @layer base {
   html {
-    scroll-behavior: smooth;
-    scroll-padding-top: 5rem;
+    scroll-padding-top: 6rem;
     -webkit-text-size-adjust: 100%;
-  }
-
-  @media (prefers-reduced-motion: reduce) {
-    html {
-      scroll-behavior: auto;
-    }
   }
 
   body {
@@ -52,7 +69,7 @@
   h2,
   h3,
   h4 {
-    @apply font-display text-primary-dark;
+    @apply font-display text-ink;
     text-wrap: balance;
   }
 
@@ -61,20 +78,29 @@
   }
 
   :focus-visible {
-    outline: 3px solid var(--color-primary);
+    outline: 3px solid var(--color-accent);
     outline-offset: 3px;
-    border-radius: 4px;
+    border-radius: 6px;
   }
 
   ::selection {
-    background: var(--color-surface-blue);
-    color: var(--color-primary-dark);
+    background: var(--color-ice);
+    color: var(--color-ink);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+    }
   }
 }
 
 @utility container-page {
   width: 100%;
-  max-width: 76rem;
+  max-width: 78rem;
   margin-inline: auto;
   padding-inline: 1rem;
 
@@ -85,6 +111,24 @@
   @media (width >= 64rem) {
     padding-inline: 2rem;
   }
+}
+
+/* Gradientes da paleta */
+@utility bg-gradient-blue {
+  background-image: linear-gradient(312deg, var(--color-primary) 0%, var(--color-accent) 100%);
+}
+
+@utility bg-gradient-cta {
+  background-image: linear-gradient(180deg, var(--color-cta) 0%, var(--color-cta-end) 100%);
+}
+
+/* Grade fina que some nas bordas, usada nos fundos escuros */
+@utility bg-grid {
+  background-image:
+    linear-gradient(to right, rgb(255 255 255 / 0.06) 1px, transparent 1px),
+    linear-gradient(to bottom, rgb(255 255 255 / 0.06) 1px, transparent 1px);
+  background-size: 64px 64px;
+  mask-image: radial-gradient(ellipse 80% 70% at 50% 40%, black 30%, transparent 100%);
 }
 
 /* Texto longo das páginas legais e dos cases */
@@ -136,6 +180,6 @@
 
   & strong {
     font-weight: 600;
-    color: var(--color-primary-dark);
+    color: var(--color-ink);
   }
 }

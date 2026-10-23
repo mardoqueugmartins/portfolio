@@ -1,4 +1,6 @@
 import type { ReactNode } from 'react'
+import { m } from 'motion/react'
+import { RevealText } from './RevealText'
 
 type Props = {
   id: string
@@ -8,18 +10,24 @@ type Props = {
 }
 
 export function SectionHeading({ id, title, intro, tone = 'light' }: Props) {
+  const dark = tone === 'dark'
   return (
     <div className="max-w-2xl">
-      <h2
+      <RevealText
         id={`${id}-titulo`}
-        className={`text-[clamp(2rem,4.5vw,3.25rem)] leading-[1.05] font-semibold tracking-tight ${tone === 'dark' ? 'text-white' : ''}`}
-      >
-        {title}
-      </h2>
+        text={title}
+        className={`text-[clamp(2.1rem,5vw,3.75rem)] leading-[1.02] font-semibold tracking-[-0.03em] ${dark ? 'text-white' : ''}`}
+      />
       {intro && (
-        <p className={`mt-4 text-lg leading-relaxed ${tone === 'dark' ? 'text-surface-blue' : 'text-text-muted'}`}>
+        <m.p
+          initial={{ opacity: 0, y: 16 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: '0px 0px -10% 0px' }}
+          transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1], delay: 0.15 }}
+          className={`mt-5 text-lg leading-relaxed ${dark ? 'text-ice' : 'text-text-muted'}`}
+        >
           {intro}
-        </p>
+        </m.p>
       )}
     </div>
   )

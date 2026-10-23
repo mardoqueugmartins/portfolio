@@ -21,7 +21,7 @@ export function Footer() {
   const { openPreferences } = useConsent()
 
   return (
-    <footer className="bg-primary-dark text-surface-blue">
+    <footer className="bg-ink text-ice">
       <div className="container-page grid gap-10 py-14 md:grid-cols-[1.4fr_1fr_1fr]">
         <div>
           <p className="font-display text-xl font-semibold text-white">
@@ -35,14 +35,14 @@ export function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="GitHub de Mardoqueu Martins"
-                className="grid size-11 place-items-center rounded-md border border-white/20 text-white transition-colors hover:bg-white/10"
+                className="grid size-11 place-items-center rounded-full border border-white/15 text-white transition-colors hover:bg-white/10"
               >
                 <GithubIcon />
               </a>
             </li>
             <li>
               {isPendente(site.links.linkedin) ? (
-                <span className="inline-flex h-11 items-center gap-2 rounded-md border border-white/20 px-3 text-sm text-white">
+                <span className="inline-flex h-11 items-center gap-2 rounded-full border border-white/15 px-3 text-sm text-white">
                   <LinkedinIcon /> <Pending />
                 </span>
               ) : (
@@ -51,7 +51,7 @@ export function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="LinkedIn de Mardoqueu Martins"
-                  className="grid size-11 place-items-center rounded-md border border-white/20 text-white transition-colors hover:bg-white/10"
+                  className="grid size-11 place-items-center rounded-full border border-white/15 text-white transition-colors hover:bg-white/10"
                 >
                   <LinkedinIcon />
                 </a>
@@ -91,7 +91,7 @@ export function Footer() {
       </div>
 
       <div className="border-t border-white/10">
-        <div className="container-page flex flex-col gap-1 py-6 text-xs text-surface-blue/80 sm:flex-row sm:justify-between">
+        <div className="container-page flex flex-col gap-1 py-6 text-xs text-ice/70 sm:flex-row sm:justify-between">
           <p>© 2026 {site.name}. Todos os direitos reservados.</p>
           <p>
             {legal.controller}, CNPJ {legal.cnpj}

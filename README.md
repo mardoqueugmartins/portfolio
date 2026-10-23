@@ -1,6 +1,6 @@
 # Portfólio — Mardoqueu Martins
 
-Site pessoal de **Mardoqueu Martins, desenvolvedor front-end** em Maceió/AL. Ele tem dois públicos: clientes que procuram sites e landing pages, e recrutadores avaliando candidatos para vagas de front-end.
+Site pessoal de **Mardoqueu Martins, desenvolvedor full stack** em Maceió/AL. Ele tem dois públicos: clientes que procuram sites e landing pages, e recrutadores avaliando candidatos para vagas de desenvolvimento.
 
 Produção: https://portfolio.mardoqueumartins.com.br
 
@@ -10,7 +10,7 @@ Produção: https://portfolio.mardoqueumartins.com.br
 | ---------- | ----------------------------------------------------------------------- |
 | Base       | React 19 + TypeScript (modo estrito) + Vite                             |
 | Estilo     | Tailwind CSS v4 com tokens semânticos da marca (`src/index.css`)        |
-| Animação   | Motion (Framer Motion) com `LazyMotion`, vinculada ao scroll            |
+| Animação   | Motion (Framer Motion) com `LazyMotion` e rolagem suave com Lenis       |
 | Rotas      | React Router, com páginas secundárias carregadas sob demanda            |
 | Tipografia | Space Grotesk (títulos) e Inter (texto), auto-hospedadas via Fontsource |
 | Qualidade  | ESLint, Prettier (com ordenação de classes do Tailwind)                 |
@@ -21,6 +21,7 @@ Produção: https://portfolio.mardoqueumartins.com.br
 - **Projetos em trilha horizontal guiada pelo scroll.** No desktop a seção fica fixa e os cards deslizam conforme a página rola. A rolagem vertical é 1:1 com o deslocamento horizontal, então o foco por teclado também leva o card até a tela. No mobile, com tela baixa ou com `prefers-reduced-motion`, vira uma grade comum.
 - **Conteúdo separado da interface.** Todos os textos ficam em `src/data`. O que ainda falta preencher está marcado como `PENDENTE` e aparece destacado na página.
 - **Privacidade por padrão.** Nenhum script, fonte ou imagem de terceiros, e nenhum cookie de rastreamento. O aviso de consentimento registra a versão dos termos aceita e reaparece quando eles mudam.
+- **Animações com propósito.** Título do hero revelado palavra por palavra, brilho que segue o cursor, números que contam ao aparecer, frase que acende com a rolagem, serviços em cards que se empilham e foto revelada por máscara. Tudo é desligado com `prefers-reduced-motion`, inclusive a rolagem suave.
 - **Performance.** Imagens em WebP com dimensões explícitas, fontes variáveis com `unicode-range`, páginas legais e de case em chunks separados.
 
 ## Estrutura
