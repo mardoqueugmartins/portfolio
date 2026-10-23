@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { AnimatePresence, motion, useMotionValueEvent, useScroll, useSpring } from 'motion/react'
+import { AnimatePresence, m, useMotionValueEvent, useScroll, useSpring } from 'motion/react'
 import { Menu, X } from 'lucide-react'
 import { Link, useLocation } from 'react-router'
 import { nav, site } from '../../data/site'
@@ -86,7 +86,7 @@ export function Header() {
         </div>
       </div>
 
-      <motion.div
+      <m.div
         aria-hidden
         className="absolute inset-x-0 bottom-0 h-0.5 origin-left bg-primary"
         style={{ scaleX: progress }}
@@ -94,7 +94,7 @@ export function Header() {
 
       <AnimatePresence>
         {open && (
-          <motion.nav
+          <m.nav
             id="menu-mobile"
             aria-label="Menu"
             initial={{ opacity: 0, y: -12 }}
@@ -120,7 +120,7 @@ export function Header() {
                 </Link>
               </li>
             </ul>
-          </motion.nav>
+          </m.nav>
         )}
       </AnimatePresence>
     </header>

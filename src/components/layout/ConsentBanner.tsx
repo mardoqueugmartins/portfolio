@@ -1,5 +1,5 @@
 import { useId, useState } from 'react'
-import { AnimatePresence, motion } from 'motion/react'
+import { AnimatePresence, m } from 'motion/react'
 import { Link } from 'react-router'
 import { useConsent } from '../../lib/consent-context'
 import { buttonClass } from '../ui/buttonClass'
@@ -17,7 +17,7 @@ function ConsentPanel() {
   const analyticsId = useId()
 
   return (
-    <motion.section
+    <m.section
       role="region"
       aria-labelledby={titleId}
       initial={{ opacity: 0, y: 24 }}
@@ -109,6 +109,6 @@ function ConsentPanel() {
           </>
         )}
       </div>
-    </motion.section>
+    </m.section>
   )
 }

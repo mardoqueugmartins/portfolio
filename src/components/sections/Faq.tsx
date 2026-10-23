@@ -1,5 +1,5 @@
 import { useId, useState } from 'react'
-import { AnimatePresence, motion } from 'motion/react'
+import { AnimatePresence, m } from 'motion/react'
 import { Plus } from 'lucide-react'
 import { faq } from '../../data/content'
 import { SectionHeading } from '../ui/SectionHeading'
@@ -53,7 +53,7 @@ function FaqItem({ question, answer, open, onToggle }: FaqItemProps) {
       </h3>
       <AnimatePresence initial={false}>
         {open && (
-          <motion.div
+          <m.div
             id={`${id}-a`}
             role="region"
             aria-labelledby={`${id}-q`}
@@ -66,7 +66,7 @@ function FaqItem({ question, answer, open, onToggle }: FaqItemProps) {
             <p className="max-w-[62ch] pb-6 leading-relaxed text-text-muted">
               <WithPending text={answer} />
             </p>
-          </motion.div>
+          </m.div>
         )}
       </AnimatePresence>
     </li>

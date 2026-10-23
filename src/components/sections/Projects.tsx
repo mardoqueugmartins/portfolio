@@ -1,5 +1,5 @@
 import { useLayoutEffect, useRef, useState, type FocusEvent } from 'react'
-import { motion, useReducedMotion, useScroll, useTransform } from 'motion/react'
+import { m, useReducedMotion, useScroll, useTransform } from 'motion/react'
 import { ArrowUpRight } from 'lucide-react'
 import { Link } from 'react-router'
 import { categories, categoryLabel, projects, type Project, type ProjectCategory } from '../../data/projects'
@@ -112,13 +112,13 @@ export function Projects() {
       <div className="sticky top-0 flex h-screen flex-col justify-center gap-10 overflow-hidden pt-20">
         {header}
         <div ref={viewportRef} className="container-page">
-          <motion.ul ref={trackRef} style={{ x }} onFocus={followFocus} className="flex gap-8">
+          <m.ul ref={trackRef} style={{ x }} onFocus={followFocus} className="flex gap-8">
             {cards}
-          </motion.ul>
+          </m.ul>
         </div>
         <div className="container-page" aria-hidden>
           <div className="h-px w-full bg-border">
-            <motion.div className="h-px origin-left bg-primary" style={{ scaleX: scrollYProgress }} />
+            <m.div className="h-px origin-left bg-primary" style={{ scaleX: scrollYProgress }} />
           </div>
         </div>
       </div>

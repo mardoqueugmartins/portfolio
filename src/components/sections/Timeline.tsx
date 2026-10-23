@@ -1,5 +1,5 @@
 import { useRef } from 'react'
-import { motion, useScroll } from 'motion/react'
+import { m, useScroll } from 'motion/react'
 import { timeline } from '../../data/content'
 import { SectionHeading } from '../ui/SectionHeading'
 import { WithPending } from '../ui/Pending'
@@ -18,7 +18,7 @@ export function Timeline() {
 
         <div className="relative pl-10">
           <div aria-hidden className="absolute top-2 bottom-2 left-[7px] w-0.5 bg-border">
-            <motion.div className="h-full w-full origin-top bg-primary" style={{ scaleY: scrollYProgress }} />
+            <m.div className="h-full w-full origin-top bg-primary" style={{ scaleY: scrollYProgress }} />
           </div>
           <ol ref={listRef} className="space-y-12">
             {timeline.map((item) => (
