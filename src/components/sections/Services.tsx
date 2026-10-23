@@ -1,7 +1,5 @@
 import { Link } from 'react-router'
 import { processSteps, services } from '../../data/content'
-import { site } from '../../data/site'
-import { ButtonLink } from '../ui/Button'
 import { buttonClass } from '../ui/buttonClass'
 import { SectionHeading } from '../ui/SectionHeading'
 
@@ -28,21 +26,6 @@ export function Services() {
             </li>
           ))}
         </ul>
-      </div>
-
-      <div className="container-page mt-16">
-        <div className="grid gap-6 rounded-2xl border border-[#f1e4c9] bg-surface-warm p-7 sm:p-10 md:grid-cols-[1fr_auto] md:items-center">
-          <div>
-            <h3 className="text-2xl leading-tight font-semibold sm:text-3xl">
-              Advogado? Tenho um plano pronto para você.
-            </h3>
-            <p className="mt-3 max-w-[60ch] leading-relaxed text-text-muted">
-              Site profissional para escritórios de advocacia por assinatura mensal: sem investimento inicial alto, com
-              hospedagem, manutenção e suporte incluídos.
-            </p>
-          </div>
-          <ButtonLink href={site.links.sitesPorAssinatura}>Conhecer os planos</ButtonLink>
-        </div>
       </div>
 
       <div className="container-page mt-24">

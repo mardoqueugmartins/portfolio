@@ -22,7 +22,6 @@ export const site = {
     github: 'https://github.com/mardoqueugmartins',
     linkedin: PENDENTE,
     cv: '/mardoqueu-martins-cv.pdf',
-    sitesPorAssinatura: 'https://mardoqueumartins.com.br/sites-por-assinatura',
   },
 } as const
 

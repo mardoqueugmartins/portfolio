@@ -4,7 +4,7 @@ export const stats = [
   { value: '+5 anos', label: 'criando para a web, do design ao código' },
   { value: '+R$ 5 milhões', label: 'em vendas movimentadas por páginas que desenvolvi' },
   { value: '+R$ 250 mil', label: 'faturados com produtos digitais próprios' },
-  { value: `${PENDENTE} projetos`, label: 'entregues para clientes' },
+  { value: '+500 projetos', label: 'entregues para clientes' },
 ]
 
 export const services = [
@@ -74,13 +74,13 @@ export const stack = [
   { group: 'CMS e e-commerce', items: ['WordPress', 'Elementor', 'WooCommerce'] },
   { group: 'Design', items: ['Figma', 'Photoshop', 'UI/UX'] },
   { group: 'Ferramentas', items: ['Git', 'GitHub', 'Vite', 'Vercel'] },
-  { group: 'Estudando agora', items: [PENDENTE] },
+  { group: 'Estudando agora', items: ['SQL', 'API', 'IA'] },
 ]
 
 export const education = {
   course: 'Engenharia de Software',
-  institution: PENDENTE,
-  conclusion: PENDENTE,
+  institution: 'Cruzeiro do Sul',
+  conclusion: '2029',
   languages: 'Português (nativo), Inglês (básico)',
 }
 
@@ -96,12 +96,7 @@ export const timeline = [
     text: 'Desenvolvo sites, landing pages e lojas virtuais para empresas e marcas. As páginas que construí já movimentaram mais de R$ 5 milhões em vendas para os clientes.',
   },
   {
-    period: `2021 – ${PENDENTE}`,
-    title: 'Empreendedor digital',
-    text: 'Em paralelo, criei produtos digitais próprios para ajudar pessoas a terem presença online de forma acessível. Eles faturaram mais de R$ 250 mil, um aprendizado prático de marketing, vendas e produto.',
-  },
-  {
-    period: `${PENDENTE} – atual`,
+    period: `${PENDENTE} – 2029 (previsão)`,
     title: 'Graduação em Engenharia de Software',
     text: 'Aprofundando arquitetura de software, estrutura de dados e boas práticas de desenvolvimento.',
   },
@@ -114,7 +109,7 @@ export const faq = [
   },
   {
     q: 'Quanto tempo leva?',
-    a: `Uma landing page costuma ficar pronta em ${PENDENTE} dias úteis; um site institucional em ${PENDENTE}. O prazo exato vai na proposta.`,
+    a: `Uma landing page costuma ficar pronta em 3 dias úteis; um site institucional em 7 dias úteis. O prazo exato vai na proposta.`,
   },
   {
     q: 'Preciso ter textos e fotos prontos?',

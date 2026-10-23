@@ -6,7 +6,6 @@ import { Projects } from '../components/sections/Projects'
 import { Recruiters } from '../components/sections/Recruiters'
 import { Services } from '../components/sections/Services'
 import { Stats } from '../components/sections/Stats'
-import { Testimonials } from '../components/sections/Testimonials'
 import { Timeline } from '../components/sections/Timeline'
 import { useDocumentTitle } from '../hooks/useDocumentTitle'
 
@@ -18,7 +17,7 @@ export default function Home() {
       <Stats />
       <Projects />
       <Services />
-      <Testimonials />
+      {/* <Testimonials /> volta quando houver ao menos dois depoimentos reais (src/data/content.ts) */}
       <Recruiters />
       <Timeline />
       <About />

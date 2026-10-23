@@ -3,6 +3,7 @@ import { Link, useParams } from 'react-router'
 import { ButtonLink } from '../components/ui/Button'
 import { WithPending } from '../components/ui/Pending'
 import { caseProjects } from '../data/projects'
+import { isPendente } from '../data/site'
 import { useDocumentTitle } from '../hooks/useDocumentTitle'
 import NotFound from './NotFound'
 
@@ -93,15 +94,19 @@ export default function CaseStudy() {
             <WithPending text={cs.result} />
           </p>
 
-          <h2>Depoimento do cliente</h2>
-          <figure className="border-l-2 border-accent pl-6">
-            <blockquote className="font-display text-xl leading-snug text-primary-dark">
-              “<WithPending text={cs.testimonial.quote} />”
-            </blockquote>
-            <figcaption className="mt-3 text-sm text-text-muted">
-              — <WithPending text={cs.testimonial.author} />
-            </figcaption>
-          </figure>
+          {!isPendente(cs.testimonial.quote) && (
+            <>
+              <h2>Depoimento do cliente</h2>
+              <figure className="border-l-2 border-accent pl-6">
+                <blockquote className="font-display text-xl leading-snug text-primary-dark">
+                  “<WithPending text={cs.testimonial.quote} />”
+                </blockquote>
+                <figcaption className="mt-3 text-sm text-text-muted">
+                  — <WithPending text={cs.testimonial.author} />
+                </figcaption>
+              </figure>
+            </>
+          )}
         </div>
 
         <div className="mt-16 flex flex-wrap gap-3 border-t border-border pt-10">
