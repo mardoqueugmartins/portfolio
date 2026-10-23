@@ -1,5 +1,6 @@
 import { Link } from 'react-router'
-import { isPendente, site } from '../../data/site'
+import { isPendente, legal, site } from '../../data/site'
+import { useConsent } from '../../lib/consent-context'
 import { GithubIcon, LinkedinIcon } from '../ui/Icons'
 import { Pending } from '../ui/Pending'
 
@@ -10,10 +11,18 @@ const footerNav = [
   { label: 'Contato', hash: 'contato' },
 ]
 
+const legalNav = [
+  { label: 'Política de Privacidade', to: '/politica-de-privacidade' },
+  { label: 'Termos de Uso', to: '/termos-de-uso' },
+  { label: 'LGPD: seus direitos', to: '/lgpd' },
+]
+
 export function Footer() {
+  const { openPreferences } = useConsent()
+
   return (
     <footer className="bg-primary-dark text-surface-blue">
-      <div className="container-page grid gap-10 py-14 md:grid-cols-[1.4fr_1fr]">
+      <div className="container-page grid gap-10 py-14 md:grid-cols-[1.4fr_1fr_1fr]">
         <div>
           <p className="font-display text-xl font-semibold text-white">
             {site.name} — {site.role}
@@ -62,12 +71,31 @@ export function Footer() {
             ))}
           </ul>
         </nav>
+
+        <nav aria-label="Documentos legais">
+          <ul className="space-y-2 text-sm">
+            {legalNav.map((item) => (
+              <li key={item.to}>
+                <Link to={item.to} className="hover:text-white">
+                  {item.label}
+                </Link>
+              </li>
+            ))}
+            <li>
+              <button type="button" onClick={openPreferences} className="text-left hover:text-white">
+                Preferências de privacidade
+              </button>
+            </li>
+          </ul>
+        </nav>
       </div>
 
       <div className="border-t border-white/10">
         <div className="container-page flex flex-col gap-1 py-6 text-xs text-surface-blue/80 sm:flex-row sm:justify-between">
           <p>© 2026 {site.name}. Todos os direitos reservados.</p>
-          <p>PENDENTE</p>
+          <p>
+            {legal.controller}, CNPJ {legal.cnpj}
+          </p>
         </div>
       </div>
     </footer>
